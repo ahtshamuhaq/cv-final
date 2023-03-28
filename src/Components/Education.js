@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Inputs from "./Inputs";
+import "../../src/App.css";
 
 const Education = (props) => {
   const [inputList, setinputList] = useState([
@@ -34,7 +35,7 @@ const Education = (props) => {
                   <Inputs
                     type="text"
                     name="Role"
-                    className="bg-zinc-600 p-2  ml-10 "
+                    className="bg-zinc-600 p-2 inp ml-10 "
                     value={inputList[i].Role}
                     placeholder="Your designation"
                     onChange={(e) => handleinputchange(e, i)}
@@ -45,9 +46,9 @@ const Education = (props) => {
                   <Inputs
                     type="text"
                     name="Institute"
-                    className="bg-zinc-600 p-2  ml-10 "
+                    className="bg-zinc-600 p-2 inp ml-10 "
                     value={inputList[i].Institute}
-                    placeholder="Enter Institute Name"
+                    placeholder="Institute Name"
                     onChange={(e) => handleinputchange(e, i)}
                   />
                 </div>
@@ -56,7 +57,7 @@ const Education = (props) => {
                   <Inputs
                     type="text"
                     name="Year"
-                    className="bg-zinc-600 p-2 ml-10 "
+                    className="bg-zinc-600 p-2 inp ml-10 "
                     value={inputList[i].Year}
                     placeholder="Date"
                     onChange={(e) => handleinputchange(e, i)}
@@ -84,20 +85,20 @@ const Education = (props) => {
               <div className="w-[10%S] ml-[5%] bg-black h-[35vh]">h</div>
               <div className="w-[45%]">
                 <div>
-                  <h1 className="bg-zinc-600 p-2  text-center ml-[25%] w-1/2 mt-4 ">
+                  <h1 className="bg-zinc-600 p-2  text-center ml-[25%] hh w-1/2 mt-4 ">
                     {inputList[i].Role.length === 0
-                      ? "Enter your Designation"
+                      ? "Designation"
                       : inputList[i].Role}
                   </h1>
-                  <h1 className="bg-zinc-600 p-2 text-center  ml-[25%] w-1/2 mt-4 ">
+                  <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-4 ">
                     {inputList[i].Institute.length === 0
-                      ? "Enter your Institute Name"
+                      ? "Institute Name"
                       : inputList[i].Institute}
                   </h1>
                 </div>
-                <h1 className="bg-zinc-600 p-2 text-center  ml-[25%] w-1/2 mt-4 ">
+                <h1 className="bg-zinc-600 p-2 text-center hh ml-[25%] w-1/2 mt-4 ">
                   {inputList[i].Year.length === 0
-                    ? "Enter you Date of Graduation"
+                    ? " Graduation Date"
                     : inputList[i].Year}
                 </h1>
               </div>

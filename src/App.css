@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 642px) and (min-width: 447px) {
+  .inp {
+    margin-left: 0;
+  }
+  .rep {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hh {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 446px) and (min-width: 320px) {
+  .inp {
+    margin-left: 0;
+    width: 140px;
+    height: 20px;
+  }
+  .rep {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .hh {
+    width: fit-content;
+    margin-left: 5px;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Inputs from "./Inputs";
+import "../../src/App.css";
 
 const Work = () => {
   const [inputList, setinputList] = useState([
@@ -34,7 +35,7 @@ const Work = () => {
                   <Inputs
                     type="text"
                     name="Role"
-                    className="bg-zinc-600 p-2  ml-10"
+                    className="bg-zinc-600 p-2 inp ml-10"
                     value={inputList[i].Role}
                     placeholder="Your designation"
                     onChange={(e) => handleinputchange(e, i)}
@@ -45,9 +46,9 @@ const Work = () => {
                   <Inputs
                     type="text"
                     name="Company"
-                    className="bg-zinc-600 p-2  ml-10"
+                    className="bg-zinc-600 p-2 inp  ml-10"
                     value={inputList[i].Company}
-                    placeholder="Enter Company Name"
+                    placeholder="Company Name"
                     onChange={(e) => handleinputchange(e, i)}
                   />
                 </div>
@@ -56,7 +57,7 @@ const Work = () => {
                   <Inputs
                     type="text"
                     name="Year"
-                    className="bg-zinc-600 p-2  ml-10"
+                    className="bg-zinc-600 p-2 inp ml-10"
                     value={inputList[i].Year}
                     placeholder="Date"
                     onChange={(e) => handleinputchange(e, i)}
@@ -84,20 +85,20 @@ const Work = () => {
               <div className="w-[10%S] ml-[5%] bg-black h-[35vh]">h</div>
               <div className="w-[45%]">
                 <div>
-                  <h1 className="bg-zinc-600 p-2 text-center  ml-[25%] w-1/2 mt-4 ">
+                  <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-4 ">
                     {inputList[i].Role.length === 0
-                      ? "Your Designation"
+                      ? "Designation"
                       : inputList[i].Role}
                   </h1>
-                  <h1 className="bg-zinc-600 p-2 text-center  ml-[25%] w-1/2 mt-4 ">
+                  <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-4 ">
                     {inputList[i].Company.length === 0
-                      ? "Enter your Company Name"
+                      ? "Company Name"
                       : inputList[i].Company}
                   </h1>
                 </div>
-                <h1 className="bg-zinc-600 p-2 text-center  ml-[25%] w-1/2 mt-4 ">
+                <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-4 ">
                   {inputList[i].Year.length === 0
-                    ? "Enter you Time period of experience"
+                    ? "Experience"
                     : inputList[i].Year}
                 </h1>
               </div>

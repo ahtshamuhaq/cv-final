@@ -1,23 +1,53 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import Inputs from "./Inputs";
 
 const Intro = () => {
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
-    const [designation, setDesignation] = useState("")
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [designation, setDesignation] = useState("");
   return (
-    <div className='flex justify-between'>
-        <div className='bg-gray-700 w-[50%]'> 
-        <input type="text" className="bg-slate-500 mr-6 mt-2" placeholder="First Name" value={firstName} onChange={(e)=>setFirstName(e.target.value)} />
-        <input type="text" className="bg-slate-500" placeholder="Last Name" value={lastName} onChange={(e)=>setLastName(e.target.value)} /> <br />
-        <input type="text" className="bg-slate-500 mt-2" placeholder="DESIGNATION" value={designation} onChange={(e)=>setDesignation(e.target.value)} />
+    <div className="flex justify-between">
+      <div className="mt-5 w-[45%]">
+        <Inputs
+          type="text"
+          className="bg-zinc-600 p-2  ml-10 mr-6 mt-2"
+          placeholder="First Name"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+        />
+        <br />
+        <Inputs
+          type="text"
+          className="bg-zinc-600 p-2  ml-10"
+          placeholder="Last Name"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+        />{" "}
+        <br />
+        <Inputs
+          type="text"
+          className="bg-zinc-600 p-2  mt-2 ml-10"
+          placeholder="DESIGNATION"
+          value={designation}
+          onChange={(e) => setDesignation(e.target.value)}
+        />
+      </div>
+      <div className="w-[10%S] bg-black h-[35vh]">h</div>
+      <div className="mt-5 w-[45%]">
+        <div className="flex">
+          <h1 className="bg-zinc-600 p-2 text-center ml-[5%] w-1/3 mr-3">
+            {firstName.length === 0 ? "FirstName" : firstName}
+          </h1>
+          <h1 className="bg-zinc-600  text-center p-2  ml-[5%] w-1/3 ">
+            {lastName.length === 0 ? "LastName" : lastName}
+          </h1>
         </div>
-        <div  className='bg-black w-[50%]'>
-            <span className='bg-slate-500 ml-[10%]'>{firstName.length === 0 ? "  enter your firstname  " : firstName}</span>
-            <span className='bg-slate-500 ml-[10%] '>{lastName.length === 0 ? "  enter your lastname  " : lastName}</span>
-            <h1 className='bg-slate-500  ml-[25%] w-1/2 mt-4 '>{designation.length === 0 ? "Designation":designation}</h1>
-        </div>
+        <h1 className="bg-zinc-600 p-2 text-center  ml-[25%] w-1/2 mt-4 ">
+          {designation.length === 0 ? "Designation" : designation}
+        </h1>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

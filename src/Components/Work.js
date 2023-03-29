@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Inputs from "./Inputs";
 import "../../src/App.css";
-
 const Work = () => {
   const [inputList, setinputList] = useState([
     { Role: "", Company: "", Year: "" },
@@ -31,21 +30,27 @@ const Work = () => {
           {inputList.map((x, i) => (
             <div className="flex mb-3">
               <div className="mt-5 w-[45%]">
-                <div className="flex col-md-4  mt-4">
-                  <Inputs
-                    type="text"
-                    name="Role"
-                    className="bg-zinc-600 p-2 inp ml-10"
-                    value={inputList[i].Role}
-                    placeholder="Your designation"
-                    onChange={(e) => handleinputchange(e, i)}
-                  />
+                <div className="flex col-md-4  mt-10">
+                  <div className="field">
+                    <label htmlFor="designation">Your Designation</label>
+                    <Inputs
+                      type="text"
+                      name="Role"
+                      className="bg-zinc-600 p-2 inp ml-10"
+                      value={inputList[i].Role}
+                      placeholder="Your designation"
+                      id="designation"
+                      onChange={(e) => handleinputchange(e, i)}
+                    />
+                  </div>
                 </div>{" "}
                 <br />
                 <div className="form-group col-md-4">
+                  <label htmlFor="aaf">Institute</label>
                   <Inputs
                     type="text"
                     name="Company"
+                    id="aaf"
                     className="bg-zinc-600 p-2 inp  ml-10"
                     value={inputList[i].Company}
                     placeholder="Company Name"
@@ -54,8 +59,10 @@ const Work = () => {
                 </div>
                 <br />
                 <div className="form-group col-md-4">
+                  <label htmlFor="dat">Date</label>
                   <Inputs
                     type="text"
+                    id="dat"
                     name="Year"
                     className="bg-zinc-600 p-2 inp ml-10"
                     value={inputList[i].Year}
@@ -82,21 +89,21 @@ const Work = () => {
                   )}
                 </div>
               </div>
-              <div className="w-[10%S] ml-[5%] bg-black h-[35vh]">h</div>
+              <div className="w-[10%S] ml-[8%] bg-black h-[48vh]">h</div>
               <div className="w-[45%]">
                 <div>
-                  <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-4 ">
+                  <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-10 ">
                     {inputList[i].Role.length === 0
                       ? "Designation"
                       : inputList[i].Role}
                   </h1>
-                  <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-4 ">
+                  <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-10 ">
                     {inputList[i].Company.length === 0
                       ? "Company Name"
                       : inputList[i].Company}
                   </h1>
                 </div>
-                <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-4 ">
+                <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-10 ">
                   {inputList[i].Year.length === 0
                     ? "Experience"
                     : inputList[i].Year}

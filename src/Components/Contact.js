@@ -9,6 +9,7 @@ const Contact = () => {
   return (
     <div className="flex justify-between">
       <div className="mt-5 w-[45%]">
+        <label htmlFor="Fname">Street#</label>
         <Inputs
           type="text"
           className="bg-zinc-600 p-2 inp mt-2 ml-10"
@@ -17,16 +18,18 @@ const Contact = () => {
           onChange={(e) => setStreet(e.target.value)}
         />
         <br />
+        <label htmlFor="Fname">Phone#</label>
         <Inputs
-          type="text"
+          type="Number"
           className="bg-zinc-600 p-2 inp mt-2 ml-10"
           placeholder="Phone no"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
         <br />
+        <label htmlFor="Fname">Email</label>
         <Inputs
-          type="text"
+          type="email"
           className="bg-zinc-600 p-2 inp mt-2 ml-10 "
           placeholder="Email"
           value={email}

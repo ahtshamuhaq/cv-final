@@ -9,22 +9,27 @@ const Intro = () => {
   return (
     <div className="flex justify-between">
       <div className="mt-5 w-[45%]">
+        <label htmlFor="Fname">FirstName</label>
         <Inputs
           type="text"
           className="bg-zinc-600 p-2 inp ml-10 mr-6 mt-2"
           placeholder="First Name"
+          id="Fname"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
         />
         <br />
+        <label htmlFor="Lname">LastName</label>
         <Inputs
           type="text"
           className="bg-zinc-600 p-2 inp ml-10"
           placeholder="Last Name"
           value={lastName}
+          id="Lname"
           onChange={(e) => setLastName(e.target.value)}
         />{" "}
         <br />
+        <label htmlFor="Fname">Designation</label>
         <Inputs
           type="text"
           className="bg-zinc-600 p-2 inp mt-2 ml-10"

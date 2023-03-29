@@ -5,7 +5,7 @@ import "../../src/App.css";
 
 const Education = (props) => {
   const [inputList, setinputList] = useState([
-    { Role: "", Institute: "", Year: "" },
+    { Degree: "", Institute: "", Year: "" },
   ]);
 
   const handleinputchange = (e, index) => {
@@ -22,7 +22,7 @@ const Education = (props) => {
   };
 
   const handleaddclick = () => {
-    setinputList([...inputList, { Role: "", Institute: "", Year: "" }]);
+    setinputList([...inputList, { Degree: "", Institute: "", Year: "" }]);
   };
   return (
     <Container className="content">
@@ -31,21 +31,25 @@ const Education = (props) => {
           {inputList.map((x, i) => (
             <div className="flex mb-3">
               <div className="mt-5 w-[45%]">
-                <div className="flex col-md-4  mt-4">
+                <div className=" col-md-4  mt-4">
+                  <label htmlFor="asd">Degree</label>
                   <Inputs
                     type="text"
-                    name="Role"
+                    name="Degree"
                     className="bg-zinc-600 p-2 inp ml-10 "
                     value={inputList[i].Role}
-                    placeholder="Your designation"
+                    placeholder="Your Degree"
                     onChange={(e) => handleinputchange(e, i)}
+                    id="asd"
                   />
                 </div>{" "}
                 <br />
                 <div className="form-group col-md-4">
+                  <label htmlFor="asf">Institute</label>
                   <Inputs
                     type="text"
                     name="Institute"
+                    id="asf"
                     className="bg-zinc-600 p-2 inp ml-10 "
                     value={inputList[i].Institute}
                     placeholder="Institute Name"
@@ -54,8 +58,10 @@ const Education = (props) => {
                 </div>
                 <br />
                 <div className="form-group col-md-4">
+                  <label htmlFor="asa">Date</label>
                   <Inputs
                     type="text"
+                    id="asa"
                     name="Year"
                     className="bg-zinc-600 p-2 inp ml-10 "
                     value={inputList[i].Year}
@@ -82,21 +88,21 @@ const Education = (props) => {
                   )}
                 </div>
               </div>
-              <div className="w-[10%S] ml-[5%] bg-black h-[35vh]">h</div>
+              <div className="w-[10%S] ml-[8%] bg-black h-[48vh]">h</div>
               <div className="w-[45%]">
                 <div>
-                  <h1 className="bg-zinc-600 p-2  text-center ml-[25%] hh w-1/2 mt-4 ">
-                    {inputList[i].Role.length === 0
-                      ? "Designation"
+                  <h1 className="bg-zinc-600 p-2 mt-10 text-center ml-[25%] hh w-1/2  ">
+                    {inputList[i].Degree.length === 0
+                      ? "Degree"
                       : inputList[i].Role}
                   </h1>
-                  <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-4 ">
+                  <h1 className="bg-zinc-600 p-2 text-center hh  ml-[25%] w-1/2 mt-10 ">
                     {inputList[i].Institute.length === 0
                       ? "Institute Name"
                       : inputList[i].Institute}
                   </h1>
                 </div>
-                <h1 className="bg-zinc-600 p-2 text-center hh ml-[25%] w-1/2 mt-4 ">
+                <h1 className="bg-zinc-600 p-2 text-center hh ml-[25%] w-1/2 mt-10 ">
                   {inputList[i].Year.length === 0
                     ? " Graduation Date"
                     : inputList[i].Year}

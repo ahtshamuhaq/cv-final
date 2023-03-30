@@ -7,7 +7,8 @@ const Intro = () => {
   const [designation, setDesignation] = useState("");
   return (
     <div className="flex justify-between">
-      <div className="mt-5 w-[45%]">
+      <div className="mt-5 w-[35%]">
+        <h1 className=" text-[40px]   pl-2  pt-12  pb-12">My Information</h1>
         <div className=" form-floating mb-3">
           <input
             type="text"
@@ -41,10 +42,11 @@ const Intro = () => {
         </div>
         <br />
       </div>
-      <div className="w-[10%S] text-black bg-black h-[48vh]">h</div>
-      <div className="mt-5 w-[45%]">
-        <div className="flex rep">
-          <h1 className="bg-zinc-600 hh p-3 break-words text-center ml-[5%] w-1/3 mr-3">
+      <div className="mt-5 w-[730px] bord">
+        <h1 className=" text-[40px]   pl-2  pt-12 pb-4  ">My Information</h1>
+
+        <div className="flex rep ">
+          <h1 className="bg-zinc-600 hh p-3 break-words text-center ml-[15%] w-1/3 mr-3">
             {firstName.length === 0 ? "FirstName" : firstName}
           </h1>
           <h1 className="bg-zinc-600 hh break-words text-center p-3 ml-[5%] w-1/3 ">

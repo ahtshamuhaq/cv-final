@@ -1,9 +1,25 @@
-/* body {
-  color: aliceblue;
-} */
+body {
+  color: black;
+}
 
 .App {
   text-align: center;
+}
+.bord {
+  border: 40px double blueviolet;
+  border-bottom: 0px;
+  padding: 15px;
+}
+.borda {
+  border: 40px double gray;
+  padding: 15px;
+}
+.bordaa {
+  border: 40px double blueviolet;
+  padding: 15px;
+}
+.ord {
+  border-top: 0px;
 }
 
 .App-logo {
@@ -26,6 +42,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.inp {
+  margin-left: 0;
 }
 
 .App-link {

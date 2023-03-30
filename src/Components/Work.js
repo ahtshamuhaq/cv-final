@@ -34,7 +34,7 @@ const Work = () => {
                     <input
                       type="text"
                       name="Role"
-                      className="bg-zinc-600 p-2 inp form-control"
+                      className="bg-zinc-600  p-2 inp form-control"
                       value={inputList[i].Role}
                       placeholder="Your designation"
                       onChange={(e) => handleinputchange(e, i)}

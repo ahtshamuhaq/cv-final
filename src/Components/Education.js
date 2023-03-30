@@ -79,7 +79,7 @@ const Education = (props) => {
                       className="bg-blue-500 mt-4 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                       onClick={handleaddclick}
                     >
-                      Add More
+                      AddMore
                     </button>
                   )}
                 </div>

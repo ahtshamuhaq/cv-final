@@ -1,26 +1,25 @@
 body {
-  color: black;
+  color: white;
 }
 
 .App {
   text-align: center;
 }
 .bord {
-  border: 40px double blueviolet;
-  border-bottom: 0px;
-  padding: 15px;
+  background-color: black;
 }
 .borda {
   border: 40px double gray;
   padding: 15px;
 }
-.bordaa {
+
+/* .bordaa {
   border: 40px double blueviolet;
   padding: 15px;
 }
 .ord {
   border-top: 0px;
-}
+} */
 
 .App-logo {
   height: 40vmin;

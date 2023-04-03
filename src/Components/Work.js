@@ -25,7 +25,7 @@ const Work = () => {
     <div className="content">
       {inputList.map((x, i) => (
         <div className="flex ">
-          <div className="mt-5 w-[35%]">
+          <div className=" w-[35%]  bg-[#333333]">
             <h1 className=" text-[40px] mb-8    mt-2  ">Work Experience</h1>
 
             <div className="flex   mt-10">
@@ -33,7 +33,7 @@ const Work = () => {
                 <input
                   type="text"
                   name="Role"
-                  className=" bg-zinc-600  w-[191px] p-2 inp form-control"
+                  className="  bg-[#333333]  w-[191px] p-2 inp form-control  text-white focus:bg-[#333333]"
                   value={inputList[i].Role}
                   placeholder="Your designation"
                   onChange={(e) => handleinputchange(e, i)}
@@ -46,7 +46,7 @@ const Work = () => {
               <input
                 type="text"
                 name="Company"
-                className=" bg-zinc-600 w-1/2  p-2 inp  form-control"
+                className="  bg-[#333333] w-1/2  p-2 inp  form-control  text-white focus:bg-[#333333]"
                 value={inputList[i].Company}
                 placeholder="Company Name"
                 onChange={(e) => handleinputchange(e, i)}
@@ -58,7 +58,7 @@ const Work = () => {
               <input
                 type="text"
                 name="Year"
-                className=" bg-zinc-600 w-1/2  p-2 inp form-control"
+                className="  bg-[#333333] w-1/2  p-2 inp form-control  text-white focus:bg-[#333333]"
                 value={inputList[i].Year}
                 placeholder="Date"
                 onChange={(e) => handleinputchange(e, i)}
@@ -85,24 +85,26 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="w-[730px] bordaa ord">
-            <h1 className=" text-[40px]   pl-2  pt-12  ">Work Experience</h1>
+          <div className="w-[730px] bord ord">
+            <h1 className=" text-[40px]  text-center text-[#F2CA46]  pb-4 pt-12  ">
+              Work Experience
+            </h1>
 
             <div>
-              <h1 className=" bg-zinc-600 w-1/2  p-3 text-center hh break-words ml-[25%]  mt-14 ">
+              <h1 className="     hh ml-[5%]  break-words text-2xl  mt-14 ">
                 {inputList[i].Role.length === 0
-                  ? "Designation"
+                  ? "Designation:-"
                   : inputList[i].Role}
               </h1>
-              <h1 className=" bg-zinc-600  w-1/2  p-3 text-center hh break-words ml-[25%]  mt-10 ">
+              <h1 className="    text-2xl      hh ml-[5%]  break-words  mt-14 ">
                 {inputList[i].Company.length === 0
-                  ? "Company Name"
+                  ? "Company Name:-"
                   : inputList[i].Company}
               </h1>
             </div>
-            <h1 className=" bg-zinc-600 w-1/2  p-3 text-center hh break-words ml-[25%]  mt-10 ">
+            <h1 className="    text-2xl     hh ml-[5%]  break-words mt-14 ">
               {inputList[i].Year.length === 0
-                ? "Experience"
+                ? "Experience:-"
                 : inputList[i].Year}
             </h1>
           </div>

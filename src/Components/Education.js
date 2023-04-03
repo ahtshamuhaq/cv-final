@@ -26,13 +26,13 @@ const Education = (props) => {
     <div className="content w-[100%]">
       {inputList.map((x, i) => (
         <div className="flex justify-between ">
-          <div className=" w-[35%] bard">
+          <div className=" w-[35%]   bg-[#333333] bard">
             <h1 className=" text-[40px] mb-8    mt-2  ">Education Details</h1>
             <div className=" form-floating mt-4">
               <input
                 type="text"
                 name="Degree"
-                className=" bg-zinc-600 w-1/2  p-2 inp form-control "
+                className="  bg-[#333333] w-1/2  p-2 inp form-control  text-white focus:bg-[#333333] "
                 value={inputList[i].Role}
                 placeholder="Your Degree"
                 onChange={(e) => handleinputchange(e, i)}
@@ -44,7 +44,7 @@ const Education = (props) => {
               <input
                 type="text"
                 name="Institute"
-                className=" bg-zinc-600 w-1/2  p-2 inp form-control "
+                className="  bg-[#333333] w-1/2  p-2 inp form-control  text-white focus:bg-[#333333] "
                 value={inputList[i].Institute}
                 placeholder="Institute Name"
                 onChange={(e) => handleinputchange(e, i)}
@@ -56,7 +56,7 @@ const Education = (props) => {
               <input
                 type="text"
                 name="Year"
-                className=" bg-zinc-600 w-1/2  p-2 inp form-control "
+                className="  bg-[#333333] w-1/2  p-2 inp form-control  text-white focus:bg-[#333333] "
                 value={inputList[i].Year}
                 placeholder="Date"
                 onChange={(e) => handleinputchange(e, i)}
@@ -84,23 +84,25 @@ const Education = (props) => {
           </div>
 
           <div className="w-[730px] bord ord">
-            <h1 className=" text-[40px] mb-8    mt-2  ">Education Details</h1>
+            <h1 className=" text-[40px]  text-center text-[#F2CA46] pb-4   mt-2  ">
+              Education Details
+            </h1>
 
             <div>
-              <h1 className=" bg-zinc-600 w-1/2  p-3 mt-10 break-words text-center ml-[25%] hh  ">
+              <h1 className="   mt-10 break-words    text-2xl   hh ml-[5%]   ">
                 {inputList[i].Degree.length === 0
-                  ? "Degree"
+                  ? "Degree:-"
                   : inputList[i].Degree}
               </h1>
-              <h1 className=" bg-zinc-600 w-1/2  p-3 text-center hh break-words ml-[25%]  mt-10 ">
+              <h1 className="         hh ml-[5%]  break-words  text-2xl    mt-16 ">
                 {inputList[i].Institute.length === 0
-                  ? "Institute Name"
+                  ? "Institute Name:-"
                   : inputList[i].Institute}
               </h1>
             </div>
-            <h1 className=" bg-zinc-600 w-1/2  p-3 text-center hh break-words ml-[25%]  mt-10 ">
+            <h1 className="         hh ml-[5%]  break-words  text-2xl    mt-16 ">
               {inputList[i].Year.length === 0
-                ? " Graduation Date"
+                ? " Graduation Date:-"
                 : inputList[i].Year}
             </h1>
           </div>

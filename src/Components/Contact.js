@@ -6,14 +6,14 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   return (
-    <div className="flex justify-between">
-      <div className="mt-5 w-[45%]">
+    <div className="flex w-[100%]">
+      <div className="w-[34.7%] bg-[#333333]">
         <h1 className=" text-3xl mb-2   mt-2">Contact Details</h1>
 
         <div className=" form-floating mb-3">
           <input
             type="text"
-            className="bg-zinc-600 form-control p-2 inp mt-2 w-1/2 "
+            className=" bg-[#333333] form-control  text-white focus:bg-[#333333] p-2 inp mt-2 w-1/2 "
             id="floatingInput"
             placeholder="Street"
             value={street}
@@ -25,7 +25,7 @@ const Contact = () => {
         <div className=" form-floating mb-3">
           <input
             type="Number"
-            className="bg-zinc-600 p-2 inp w-1/2 mt-2 form-control"
+            className=" bg-[#333333] p-2 inp w-1/2 mt-2 form-control  text-white focus:bg-[#333333]"
             id="floatingInput"
             placeholder="Phone no"
             value={phone}
@@ -37,7 +37,7 @@ const Contact = () => {
         <div className=" form-floating mb-3">
           <input
             type="email"
-            className="bg-zinc-600 p-2 inp w-1/2 mt-2 form-control "
+            className=" bg-[#333333] p-2 inp w-1/2 mt-2 form-control  text-white focus:bg-[#333333] "
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -45,20 +45,22 @@ const Contact = () => {
           <label htmlFor="floatingInput">EMAIL</label>
         </div>
       </div>
-      <div className=" w-[905px] bord ord  ">
-        <h1 className=" text-[40px] mb-8    mt-2">Contact Details</h1>
-        <div className="ml-[25%]">
-          <div className="flex flex-col  rep">
-            <h1 className="bg-zinc-600  p-3 hh break-words mb-5  w-1/2 text-center">
-              {street.length === 0 ? "Street Number" : street}
+      <div className=" w-[65.3%] bord ord   ">
+        <h1 className=" text-[40px]  text-center text-[#F2CA46]   pb-4">
+          Contact Details
+        </h1>
+        <div>
+          <div className="  rep">
+            <h1 className="    p-3   hh ml-[5%] text-2xl  break-words mb-5  ">
+              {street.length === 0 ? "Street Number:-" : street}
             </h1>
-            <h1 className=" p-3 bg-zinc-600 break-words text-center hh w-1/2">
-              {phone.length === 0 ? "Phone Number" : phone}
+            <h1 className="break-words  p-3 text-2xl  hh ml-[5%]  ">
+              {phone.length === 0 ? "Phone Number:-" : phone}
             </h1>
           </div>
           <br />
-          <h1 className="bg-zinc-600 p-3 text-center break-words  mt-8 hh w-1/2">
-            {email.length === 0 ? "Email Address" : email}
+          <h1 className=" break-words  mt-4 text-2xl p-3  hh ml-[5%]  ">
+            {email.length === 0 ? "Email Address:-" : email}
           </h1>
         </div>
       </div>

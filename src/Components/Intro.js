@@ -53,7 +53,7 @@ const Intro = () => {
         </div>
         <br />
       </div>
-      <div className="w-[730px] bord">
+      <div className="w-[65%] bord">
         <h1 className=" text-[40px]  text-center text-[#F2CA46]  mt-24 pb-4  ">
           My Information
         </h1>

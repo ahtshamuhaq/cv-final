@@ -85,7 +85,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="w-[730px] bord ord">
+          <div className="w-[65%] bord ord">
             <h1 className=" text-[40px]  text-center text-[#F2CA46]  pb-4 pt-12  ">
               Work Experience
             </h1>

@@ -24,7 +24,7 @@ const Work = () => {
   return (
     <div className="content">
       {inputList.map((x, i) => (
-        <div className="flex ">
+        <div className="flex w-[100%] ">
           <div className=" w-[35%]  bg-[#333333]">
             <h1 className=" text-[40px] mb-8    mt-2  ">Work Experience</h1>
 

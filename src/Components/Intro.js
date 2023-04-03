@@ -7,7 +7,7 @@ const Intro = () => {
   const [designation, setDesignation] = useState("");
   const [age, setAge] = useState("");
   return (
-    <div className="flex justify-between">
+    <div className="flex w-[100%]">
       <div className=" w-[35%] bg-[#333333]">
         <h1 className=" text-[40px]  pt-12  pb-12">My Information</h1>
         <div className=" form-floating">

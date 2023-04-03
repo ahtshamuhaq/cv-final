@@ -25,7 +25,7 @@ const Education = (props) => {
   return (
     <div className="content w-[100%]">
       {inputList.map((x, i) => (
-        <div className="flex justify-between ">
+        <div className="flex w-[100%] ">
           <div className=" w-[35%]   bg-[#333333] bard">
             <h1 className=" text-[40px] mb-8    mt-2  ">Education Details</h1>
             <div className=" form-floating mt-4">

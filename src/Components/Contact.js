@@ -46,7 +46,7 @@ const Contact = () => {
         </div>
       </div>
       <div className=" w-[65%] bord ord   ">
-        <h1 className=" text-[40px]  ml-[5%] mt-[-25%] text-teal-400    pb-4">
+        <h1 className=" text-[40px]  ml-[5%] mt-[-25%] text-[#2BABE2]    pb-4">
           Contact Details
         </h1>
         <div>

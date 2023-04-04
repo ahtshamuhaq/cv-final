@@ -53,7 +53,7 @@ const Intro = () => {
             {lastName.length === 0 ? "LastName" : lastName}
           </h1>
         </div>
-        <h1 className="   text-2xl     hh ml-[5%] mt-12 text-teal-400  break-words ">
+        <h1 className="   text-2xl     hh ml-[5%] mt-12 text-[#2BABE2]  break-words ">
           {designation.length === 0 ? "Designation:-" : designation}
         </h1>
       </div>

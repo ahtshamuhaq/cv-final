@@ -83,7 +83,7 @@ const Education = (props) => {
           </div>
 
           <div className="w-[65%] bord ord">
-            <h1 className=" text-[40px]  ml-[5%] text-teal-400 pb-4   mt-2  ">
+            <h1 className=" text-[40px]  ml-[5%] text-[#2BABE2] pb-4   mt-2  ">
               Education Details
             </h1>
 

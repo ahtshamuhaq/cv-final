@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../../src/App.css";
-
 const Education = (props) => {
   const [inputList, setinputList] = useState([
     { Degree: "", Institute: "", Year: "" },
@@ -32,7 +31,7 @@ const Education = (props) => {
               <input
                 type="text"
                 name="Degree"
-                className="  bg-[#333333] w-1/2  p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="  bg-[#333333] w-1/2  p-2 inp form-control   text-white focus:bg-[#333333] "
                 value={inputList[i].Role}
                 placeholder="Your Degree"
                 onChange={(e) => handleinputchange(e, i)}
@@ -74,7 +73,7 @@ const Education = (props) => {
               )}
               {inputList.length - 1 === i && (
                 <button
-                  className="bg-blue-500 mt-4 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                  className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                   onClick={handleaddclick}
                 >
                   AddMore
@@ -84,25 +83,25 @@ const Education = (props) => {
           </div>
 
           <div className="w-[65%] bord ord">
-            <h1 className=" text-[40px]  text-center text-[#F2CA46] pb-4   mt-2  ">
+            <h1 className=" text-[40px]  ml-[5%] text-teal-400 pb-4   mt-2  ">
               Education Details
             </h1>
 
             <div>
-              <h1 className="   mt-10 break-words    text-2xl   hh ml-[5%]   ">
+              <h1 className="   mt-10 break-words  font-extrabold  text-2xl text-black  hh ml-[7%]   ">
                 {inputList[i].Degree.length === 0
                   ? "Degree:-"
                   : inputList[i].Degree}
               </h1>
-              <h1 className="         hh ml-[5%]  break-words  text-2xl    mt-16 ">
+              <h1 className="         hh ml-[7%]  break-words  text-2xl text-black   mt-16 ">
                 {inputList[i].Institute.length === 0
                   ? "Institute Name:-"
                   : inputList[i].Institute}
               </h1>
             </div>
-            <h1 className="         hh ml-[5%]  break-words  text-2xl    mt-16 ">
+            <h1 className="         hh ml-[7%]  break-words  text-2xl text-black   mt-16 ">
               {inputList[i].Year.length === 0
-                ? " Graduation Date:-"
+                ? "Graduation Date"
                 : inputList[i].Year}
             </h1>
           </div>

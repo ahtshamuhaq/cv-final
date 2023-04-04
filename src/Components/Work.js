@@ -76,7 +76,7 @@ const Work = () => {
               )}
               {inputList.length - 1 === i && (
                 <button
-                  className="bg-blue-500  ml-10 mb-5 mt-4  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                  className="bg-blue-500  ml-10 mb-5 mt-2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                   onClick={handleaddclick}
                 >
                   AddMore
@@ -86,23 +86,26 @@ const Work = () => {
           </div>
 
           <div className="w-[65%] bord ord">
-            <h1 className=" text-[40px]  text-center text-[#F2CA46]  pb-4 pt-12  ">
+            <h1
+              className=" text-[40px]  
+              ml-[5%] text-teal-400  pb-4 pt-12  "
+            >
               Work Experience
             </h1>
 
             <div>
-              <h1 className="     hh ml-[5%]  break-words text-2xl  mt-14 ">
+              <h1 className="  font-extrabold   hh ml-[8%]  break-words text-2xl text-black mt-14 ">
                 {inputList[i].Role.length === 0
                   ? "Designation:-"
                   : inputList[i].Role}
               </h1>
-              <h1 className="    text-2xl      hh ml-[5%]  break-words  mt-14 ">
+              <h1 className="    text-2xl      hh ml-[8%]  break-words text-black mt-14 ">
                 {inputList[i].Company.length === 0
                   ? "Company Name:-"
                   : inputList[i].Company}
               </h1>
             </div>
-            <h1 className="    text-2xl     hh ml-[5%]  break-words mt-14 ">
+            <h1 className="    text-2xl     hh ml-[8%]  break-words text-black mt-14 ">
               {inputList[i].Year.length === 0
                 ? "Experience:-"
                 : inputList[i].Year}

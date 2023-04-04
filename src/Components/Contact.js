@@ -7,7 +7,7 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   return (
     <div className="flex w-[100%]">
-      <div className="w-[34.7%] bg-[#333333]">
+      <div className="w-[35%] bg-[#333333]">
         <h1 className=" text-3xl mb-2   mt-2">Contact Details</h1>
 
         <div className=" form-floating mb-3">
@@ -45,21 +45,21 @@ const Contact = () => {
           <label htmlFor="floatingInput">EMAIL</label>
         </div>
       </div>
-      <div className=" w-[65.3%] bord ord   ">
-        <h1 className=" text-[40px]  text-center text-[#F2CA46]   pb-4">
+      <div className=" w-[65%] bord ord   ">
+        <h1 className=" text-[40px]  ml-[5%] mt-[-25%] text-teal-400    pb-4">
           Contact Details
         </h1>
         <div>
           <div className="  rep">
-            <h1 className="    p-3   hh ml-[5%] text-2xl  break-words mb-5  ">
+            <h1 className="    p-3   hh ml-[5%] text-2xl text-black break-words mb-5  ">
               {street.length === 0 ? "Street Number:-" : street}
             </h1>
-            <h1 className="break-words  p-3 text-2xl  hh ml-[5%]  ">
+            <h1 className="break-words  p-3 text-2xl  hh ml-[5%] text-black ">
               {phone.length === 0 ? "Phone Number:-" : phone}
             </h1>
           </div>
           <br />
-          <h1 className=" break-words  mt-4 text-2xl p-3  hh ml-[5%]  ">
+          <h1 className=" break-words  mt-4 text-2xl p-3  hh ml-[5%]  text-black">
             {email.length === 0 ? "Email Address:-" : email}
           </h1>
         </div>

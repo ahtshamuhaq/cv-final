@@ -12,6 +12,12 @@ body {
   border: 40px double gray;
   padding: 15px;
 }
+.hq {
+  border: 1px solid red;
+  padding: 5px;
+  width: 50%;
+  height: 70%;
+}
 
 /* .bordaa {
   border: 40px double blueviolet;
@@ -75,7 +81,7 @@ body {
 @media screen and (max-width: 446px) and (min-width: 320px) {
   .inp {
     margin-left: 0;
-    width: 140px;
+    width: 50%;
     height: 20px;
   }
   .rep {

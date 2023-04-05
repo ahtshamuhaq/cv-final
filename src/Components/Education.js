@@ -42,18 +42,6 @@ const Education = (props) => {
             <div className="form-group form-floating ">
               <input
                 type="text"
-                name="Institute"
-                className="  bg-[#333333] w-1/2  p-2 inp form-control  text-white focus:bg-[#333333] "
-                value={inputList[i].Institute}
-                placeholder="Institute Name"
-                onChange={(e) => handleinputchange(e, i)}
-              />
-              <label htmlFor="floatingInput">Institute Name</label>
-            </div>
-            <br />
-            <div className="form-group form-floating ">
-              <input
-                type="text"
                 name="Year"
                 className="  bg-[#333333] w-1/2  p-2 inp form-control  text-white focus:bg-[#333333] "
                 value={inputList[i].Year}
@@ -61,6 +49,18 @@ const Education = (props) => {
                 onChange={(e) => handleinputchange(e, i)}
               />
               <label htmlFor="floatingInput">Date</label>
+            </div>
+            <br />
+            <div className="form-group form-floating ">
+              <input
+                type="text"
+                name="Institute"
+                className="  bg-[#333333] w-1/2  p-2 inp form-control  text-white focus:bg-[#333333] "
+                value={inputList[i].Institute}
+                placeholder="Institute Name"
+                onChange={(e) => handleinputchange(e, i)}
+              />
+              <label htmlFor="floatingInput">Institute Name</label>
             </div>
             <div className="col-md-2 mt-4">
               {inputList.length !== 1 && (
@@ -88,22 +88,31 @@ const Education = (props) => {
             </h1>
 
             <div>
-              <h1 className="   mt-10 break-words  font-extrabold  text-2xl text-black  hh ml-[7%]   ">
+              <h1 className="   mt-10 break-words  font-extrabold  text-2xl text-black  hh ml-[7%] mb-4  ">
                 {inputList[i].Degree.length === 0
                   ? "Degree:-"
                   : inputList[i].Degree}
               </h1>
-              <h1 className="         hh ml-[7%]  break-words  text-2xl text-black   mt-16 ">
+              <span className="         hh  ml-[7%]  break-words  text-2xl text-black   ">
+                {inputList[i].Year.length === 0
+                  ? "Graduation Date"
+                  : inputList[i].Year}
+              </span>
+              <span className="         hh  break-words ml-2  text-2xl text-[#2BABE2]   mt-16 ">
                 {inputList[i].Institute.length === 0
                   ? "Institute Name:-"
-                  : inputList[i].Institute}
-              </h1>
+                  : inputList[i].Institute}{" "}
+              </span>
+              <span className="text-black text-2xl">Town</span>
+              <br />
+              <ol
+                className="text-black  ml-[12%] text-2xl"
+                style={{ listStyleType: "disc" }}
+              >
+                <li className="mt-4">Specialization</li>
+                <li className="mt-4">Achievements</li>
+              </ol>
             </div>
-            <h1 className="         hh ml-[7%]  break-words  text-2xl text-black   mt-16 ">
-              {inputList[i].Year.length === 0
-                ? "Graduation Date"
-                : inputList[i].Year}
-            </h1>
           </div>
         </div>
       ))}

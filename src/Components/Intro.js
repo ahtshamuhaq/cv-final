@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../src/App.css";
 
-const Intro = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [designation, setDesignation] = useState("");
-  const [introduction, setIntroduction] = useState("");
-
+const Intro = ({
+  setFirstName,
+  firstName,
+  lastName,
+  setLastName,
+  setDesignation,
+  designation,
+}) => {
   return (
-    <div className="flex  w-[100%]">
-      <div className=" w-[35%] bg-[#333333]">
+    <div className="  w-[100%]">
+      <div className="  bg-[#333333]">
         <h1 className=" text-[15px]  pt-12 font-extrabold pb-12">
           My Information
         </h1>
@@ -44,20 +46,10 @@ const Intro = () => {
           />
           <label htmlFor="floatingInput">Designation</label>
         </div>
-        <div className=" form-floating  ">
-          <input
-            type="text"
-            className=" bg-[#333333] p-2 w-1/3 text-[12px]   text-white inp mt-2 form-control focus:bg-[#333333]"
-            placeholder="DESIGNATION"
-            value={introduction}
-            onChange={(e) => setIntroduction(e.target.value)}
-          />
-          <label htmlFor="floatingInput">About</label>
-        </div>
 
         <br />
       </div>
-      <div className="w-[65%] h-[30vh] bord">
+      {/* <div className="w-[65%] h-[30vh] bord">
         <div className="flex rep ">
           <h1 className="  text-black  font-bold  hh ml-[5%] mt-6 text-[16px]  break-words   mr-3">
             {firstName.length === 0 ? "FirstName" : firstName}
@@ -72,7 +64,7 @@ const Intro = () => {
         <p className="  hq ml-[5%] mt-12 text-black break-words ">
           {introduction.length === 0 ? "Write About Yourself" : introduction}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

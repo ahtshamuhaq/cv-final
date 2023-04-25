@@ -12,24 +12,23 @@ const Intro = ({
   return (
     <div className="  w-[100%]">
       <div className="  bg-[#333333]">
-        <h1 className=" text-[15px]  pt-12 font-extrabold pb-12">
+        <h1 className=" text-[25px]  pt-12 font-extrabold pb-12">
           My Information
         </h1>
         <div className=" form-floating">
           <input
             type="text"
-            className=" bg-[#333333]  text-white  p-2 inp w-1/3 text-[12px]  form-control mr-6 mt-2 focus:bg-[#333333] outline-0"
+            className=" bg-[#333333] p-2 inp w-[90%] text-[12px]  mt-1 form-control  text-white focus:bg-[#333333] "
             placeholder="First Name"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
           <label htmlFor="floatingInput">FirstName </label>
         </div>
-        <br />
         <div className=" form-floating ">
           <input
             type="text"
-            className=" bg-[#333333]  text-white w-1/3 text-[12px]  p-2  inp form-control focus:bg-[#333333]"
+            className=" bg-[#333333] p-2 inp w-[90%] text-[12px]  mt-4 form-control  text-white focus:bg-[#333333] "
             placeholder="Last Name"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
@@ -39,7 +38,7 @@ const Intro = ({
         <div className=" form-floating  ">
           <input
             type="text"
-            className=" bg-[#333333] p-2 w-1/3 text-[12px]   text-white inp mt-2 form-control focus:bg-[#333333]"
+            className=" bg-[#333333] p-2 inp w-[90%] text-[12px]  mt-4 form-control  text-white focus:bg-[#333333] "
             placeholder="DESIGNATION"
             value={designation}
             onChange={(e) => setDesignation(e.target.value)}

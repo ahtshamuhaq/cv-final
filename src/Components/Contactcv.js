@@ -3,7 +3,7 @@ import "../../src/App.css";
 
 const Contactcv = ({ street, email, phone }) => {
   return (
-    <div className="w-[100%] mt-[18%]">
+    <div className="w-[100%] mt-16">
       {/* <div className="w-[30%] bg-[#333333]">
         <h1 className=" text-[15px] font-extrabold mb-2   mt-2">
           Contact Details

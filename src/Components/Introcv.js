@@ -3,7 +3,7 @@ import "../../src/App.css";
 
 const Introcv = ({ firstName, lastName, designation }) => {
   return (
-    <div className=" w-[100%] mt-[5%]">
+    <div className=" w-[100%] mt-[10%]">
       <div className="  bord">
         <div className="flex rep ">
           <h1 className="  text-black  font-bold  hh ml-[5%] mt-6 text-[16px]  break-words   mr-3">

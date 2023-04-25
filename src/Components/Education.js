@@ -16,7 +16,7 @@
 //             <input
 //               type="text"
 //               name="Degree"
-//               className="  bg-[#333333] w-1/3 text-[12px]   p-2 inp form-control   text-white focus:bg-[#333333] "
+//               className="  bg-[#333333] w-[90%] text-[12px]   p-2 inp form-control   text-white focus:bg-[#333333] "
 //               // value={x}
 //               placeholder="Your Degree"
 //               // onChange={(e) => handleinputchange(e, i)}
@@ -30,7 +30,7 @@
 //             <input
 //               type="text"
 //               name="Year"
-//               className="  bg-[#333333] w-1/3 text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+//               className="  bg-[#333333] w-[90%] text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
 //               // value={dataObject[i].Year}
 //               placeholder="Date"
 //               onChange={handleChange}
@@ -42,7 +42,7 @@
 //             <input
 //               type="text"
 //               name="Institute"
-//               className="  bg-[#333333] w-1/3 text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+//               className="  bg-[#333333] w-[90%] text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
 //               // value={dataObject[i].Institute}
 //               placeholder="Institute Name"
 //               // onChange={(e) => handleinputchange(e, i)}
@@ -85,14 +85,14 @@ const Education = (props) => {
       {inputList.map((x, i) => (
         <div className="flex w-[100%] ">
           <div className=" w-[30%]   bg-[#333333] bard">
-            <h1 className=" text-[15px] font-extrabold mb-8    mt-2  ">
+            <h1 className=" text-[25px] font-extrabold pb-10 pt-12     ">
               Education Details
             </h1>
             <div className=" form-floating mt-4">
               <input
                 type="text"
                 name="Degree"
-                className="  bg-[#333333] w-1/3  p-2 inp form-control   text-white focus:bg-[#333333] "
+                className="  bg-[#333333] w-[90%]  p-2 inp form-control   text-white focus:bg-[#333333] "
                 value={inputList[i].Role}
                 placeholder="Your Degree"
                 onChange={(e) => handleinputchange(e, i)}
@@ -102,9 +102,9 @@ const Education = (props) => {
             <br />
             <div className="form-group form-floating ">
               <input
-                type="text"
+                type="date"
                 name="Year"
-                className="  bg-[#333333] w-1/3  p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="  bg-[#333333] w-[90%]  p-2 inp form-control  text-white focus:bg-[#333333] "
                 value={inputList[i].Year}
                 placeholder="Date"
                 onChange={(e) => handleinputchange(e, i)}
@@ -116,7 +116,7 @@ const Education = (props) => {
               <input
                 type="text"
                 name="Institute"
-                className="  bg-[#333333] w-1/3  p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="  bg-[#333333] w-[90%]  p-2 inp form-control  text-white focus:bg-[#333333] "
                 value={inputList[i].Institute}
                 placeholder="Institute Name"
                 onChange={(e) => handleinputchange(e, i)}
@@ -144,7 +144,7 @@ const Education = (props) => {
           </div>
 
           <div className="w-[65%] bord ord">
-            <h1 className=" text-[25px]  ml-[5%] text-[#2BABE2] pb-4   mt-2  ">
+            <h1 className=" text-[25px]  ml-[5%] text-[#2BABE2] pb-4   pt-12  ">
               Education Details
             </h1>
 

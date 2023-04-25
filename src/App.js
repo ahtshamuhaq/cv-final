@@ -6,7 +6,7 @@ import Work from "./Components/Work";
 
 function App() {
   return (
-    <div className=" h-[100%] w-full borda  ">
+    <div className=" h-[100%] w-full ">
       <Intro />
       <Contact />
       <Education />

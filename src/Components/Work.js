@@ -26,14 +26,16 @@ const Work = () => {
       {inputList.map((x, i) => (
         <div className="flex w-[100%] ">
           <div className=" w-[35%]  bg-[#333333]">
-            <h1 className=" text-[40px] mb-8    mt-2  ">Work Experience</h1>
+            <h1 className=" text-[15px] mb-8   font-extrabold  mt-2  ">
+              Work Experience
+            </h1>
 
             <div className="  mt-10">
               <div className=" form-floating">
                 <input
                   type="text"
                   name="Role"
-                  className="  bg-[#333333]  w-1/2 p-2 inp form-control  text-white focus:bg-[#333333]"
+                  className="  bg-[#333333]  w-1/3 text-[12px]  p-2 inp form-control  text-white focus:bg-[#333333]"
                   value={inputList[i].Role}
                   placeholder="Your designation"
                   onChange={(e) => handleinputchange(e, i)}
@@ -46,7 +48,7 @@ const Work = () => {
               <input
                 type="text"
                 name="Year"
-                className="  bg-[#333333] w-1/2  p-2 inp form-control  text-white focus:bg-[#333333]"
+                className="  bg-[#333333] w-1/3 text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333]"
                 value={inputList[i].Year}
                 placeholder="Date"
                 onChange={(e) => handleinputchange(e, i)}
@@ -58,7 +60,7 @@ const Work = () => {
               <input
                 type="text"
                 name="Company"
-                className="  bg-[#333333] w-1/2  p-2 inp  form-control  text-white focus:bg-[#333333]"
+                className="  bg-[#333333] w-1/3 text-[12px]   p-2 inp  form-control  text-white focus:bg-[#333333]"
                 value={inputList[i].Company}
                 placeholder="Company Name"
                 onChange={(e) => handleinputchange(e, i)}
@@ -87,30 +89,30 @@ const Work = () => {
 
           <div className="w-[65%] bord ord">
             <h1
-              className=" text-[40px]  
+              className=" text-[15px]  
               ml-[5%] text-[#2BABE2] pb-4   "
             >
               Work Experience
             </h1>
 
             <div>
-              <h1 className="  font-extrabold   hh ml-[8%]  break-words text-2xl text-black mt-14  mb-8">
+              <h1 className="  font-extrabold   hh ml-[8%]  break-words text-[12px]  text-black mt-14  mb-8">
                 {inputList[i].Role.length === 0
                   ? "Designation:-"
                   : inputList[i].Role}
               </h1>
-              <span className="    text-2xl     hh ml-[9%]  break-words text-black mt-14 ">
+              <span className="    text-[12px]      hh ml-[9%]  break-words text-black mt-14 ">
                 {inputList[i].Year.length === 0 ? "Year" : inputList[i].Year}
               </span>
-              <span className="    text-2xl      hh ml-4  break-words text-[#2BABE2] mt-14 ">
+              <span className="    text-[12px]       hh ml-4  break-words text-[#2BABE2] mt-14 ">
                 {inputList[i].Company.length === 0
                   ? "Company Name:-"
                   : inputList[i].Company}
               </span>
-              <span className="text-black text-2xl">Town</span>
+              <span className="text-black text-[12px] ">Town</span>
               <br />
               <ol
-                className="text-black  ml-[12%] text-2xl"
+                className="text-black  ml-[12%] text-[12px] "
                 style={{ listStyleType: "disc" }}
               >
                 <li className="mt-4">Details Of Jobs done</li>

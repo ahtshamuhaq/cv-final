@@ -45,20 +45,20 @@ const Contactcv = ({ street, email, phone }) => {
         </div>
       </div> */}
       <div className="  bord ord   ">
-        <h1 className=" text-[25px]  ml-[5%] text-[#2BABE2]    pb-4">
+        <h1 className=" text-[25px]  ml-[5%] text-[#2BABE2]    mb-4">
           Contact Details
         </h1>
         <div>
           <div className="  rep">
-            <h1 className="    p-3   hh ml-[5%] text-[15px ]  text-black break-words mb-5  ">
+            <h1 className="    p-3   hh ml-[5%] text-[15px ]  text-black break-words mb-4 ">
               {street.length === 0 ? "Street Number:-" : street}
             </h1>
-            <h1 className="break-words  p-3 text-[15px ]   hh ml-[5%] text-black ">
+            <h1 className="break-words p-3 text-[15px ]   hh ml-[5%] text-black mb-4">
               {phone.length === 0 ? "Phone Number:-" : phone}
             </h1>
           </div>
           <br />
-          <h1 className=" break-words  mt-4 text-[15px ]  p-3  hh ml-[5%]  text-black">
+          <h1 className=" break-words  mb-4 text-[15px ]  p-3  hh ml-[5%]  text-black">
             {email.length === 0 ? "Email Address:-" : email}
           </h1>
         </div>

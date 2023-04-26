@@ -5,7 +5,7 @@ const Introcv = ({ firstName, lastName, designation }) => {
   return (
     <div className=" w-[100%] mt-[10%]">
       <div className="  bord">
-        <div className="flex rep ">
+        <div className="flex  ">
           <h1 className="  text-black  font-bold  hh ml-[5%] mt-6 text-[16px]  break-words   mr-3">
             {firstName.length === 0 ? "FirstName" : firstName}
           </h1>

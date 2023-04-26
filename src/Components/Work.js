@@ -198,24 +198,24 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="w-[65%] bord ord">
+          <div className="w-[65%] mt-[-200px] bord ord">
             <h1
               className=" text-[25px]  
-              ml-[5%] text-[#2BABE2] pb-4 pt-12   "
+              ml-[5%] text-[#2BABE2] mb-8   "
             >
               Work Experience
             </h1>
 
             <div>
-              <h1 className="  font-extrabold   hh ml-[8%]  break-words text-[15px ] text-black mt-14  mb-8">
+              <h1 className="  font-extrabold   ml-[8%]  break-words text-[15px ] text-black  mb-8">
                 {inputList[i].Role.length === 0
                   ? "Designation:-"
                   : inputList[i].Role}
               </h1>
-              <span className="    text-[15px ]     hh ml-[9%]  break-words text-black mt-14 ">
+              <span className="    text-[15px ]     hh ml-[9%]  break-words text-black mb-8 ">
                 {inputList[i].Year.length === 0 ? "Year" : inputList[i].Year}
               </span>
-              <span className="    text-[15px ]      hh ml-4  break-words text-[#2BABE2] mt-14 ">
+              <span className="    text-[15px ]      hh ml-4  break-words text-[#2BABE2] mb-8">
                 {inputList[i].Company.length === 0
                   ? "Company Name:-"
                   : inputList[i].Company}

@@ -134,7 +134,8 @@ const Education = (props) => {
               )}
               {inputList.length - 1 === i && (
                 <button
-                  className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                  className="bg-blue-500 
+                   mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                   onClick={handleaddclick}
                 >
                   AddMore
@@ -143,8 +144,8 @@ const Education = (props) => {
             </div>
           </div>
 
-          <div className="w-[65%] bord ord">
-            <h1 className=" text-[25px]  ml-[5%] text-[#2BABE2] pb-4   pt-12  ">
+          <div className="w-[65%] bord mt-[-70px] ord">
+            <h1 className=" text-[25px]  ml-[5%] text-[#2BABE2] mb-5  ">
               Education Details
             </h1>
 

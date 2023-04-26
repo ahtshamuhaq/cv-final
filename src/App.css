@@ -65,6 +65,32 @@ body {
   }
 }
 
+@media screen and (max-width: 1854px) and (min-width: 990px) {
+  .order {
+    margin-top: -80px;
+  }
+}
+@media screen and (max-width: 2600px) and (min-width: 1855px) {
+  .order {
+    margin-top: -80px;
+  }
+}
+@media screen and (max-width: 989px) and (min-width: 400px) {
+  .order {
+    margin-top: -160px;
+  }
+}
+@media screen and (max-width: 545px) and (min-width: 200px) {
+  .bts {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 399px) {
+  .order {
+    margin-top: -220px;
+  }
+}
+
 @media screen and (max-width: 642px) and (min-width: 447px) {
   .inp {
     margin-left: 0;

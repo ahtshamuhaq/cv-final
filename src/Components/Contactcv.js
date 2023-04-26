@@ -58,7 +58,7 @@ const Contactcv = ({ street, email, phone }) => {
             </h1>
           </div>
           <br />
-          <h1 className=" break-words  mb-4 text-[15px ]  p-3  hh ml-[5%]  text-black">
+          <h1 className=" break-words mt-[-20px] text-[15px ]  p-3  hh ml-[5%]  text-black">
             {email.length === 0 ? "Email Address:-" : email}
           </h1>
         </div>

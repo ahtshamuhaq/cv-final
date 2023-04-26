@@ -181,7 +181,7 @@ const Work = () => {
             <div className="form-group col-md-2 mt-4">
               {inputList.length !== 1 && (
                 <button
-                  className="bg-blue-500  ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                  className="bg-blue-500 bts  ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                   onClick={() => handleremove(i)}
                 >
                   Remove
@@ -189,7 +189,7 @@ const Work = () => {
               )}
               {inputList.length - 1 === i && (
                 <button
-                  className="bg-blue-500  ml-10 mb-5 mt-4  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                  className="bg-blue-500 bts ml-10 mb-5 mt-4  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                   onClick={handleaddclick}
                 >
                   AddMore

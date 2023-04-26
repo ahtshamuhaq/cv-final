@@ -81,7 +81,7 @@ const Education = (props) => {
     setinputList([...inputList, { Degree: "", Institute: "", Year: "" }]);
   };
   return (
-    <div className="content w-[100%]">
+    <div className=" w-[100%]">
       {inputList.map((x, i) => (
         <div className="flex w-[100%] ">
           <div className=" w-[30%]   bg-[#333333] bard">
@@ -126,7 +126,7 @@ const Education = (props) => {
             <div className="col-md-2 mt-4">
               {inputList.length !== 1 && (
                 <button
-                  className="bg-blue-500  ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                  className="bg-blue-500 bts ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                   onClick={() => handleremove(i)}
                 >
                   Remove
@@ -134,7 +134,7 @@ const Education = (props) => {
               )}
               {inputList.length - 1 === i && (
                 <button
-                  className="bg-blue-500 
+                  className="bg-blue-500 bts
                    mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                   onClick={handleaddclick}
                 >
@@ -144,13 +144,13 @@ const Education = (props) => {
             </div>
           </div>
 
-          <div className="w-[65%] bord mt-[-70px] ord">
+          <div className="w-[65%] bord mt-[-70px] order">
             <h1 className=" text-[25px]  ml-[5%] text-[#2BABE2] mb-5  ">
               Education Details
             </h1>
 
             <div>
-              <h1 className="   mt-4 break-words text-[15px ] font-extrabold   text-black  hh ml-[7%] mb-4  ">
+              <h1 className="    break-words text-[15px ] font-extrabold   text-black  hh ml-[7%] mb-5  ">
                 {inputList[i].Degree.length === 0
                   ? "Degree:-"
                   : inputList[i].Degree}

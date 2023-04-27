@@ -31,6 +31,12 @@ body {
   height: 40vmin;
   pointer-events: none;
 }
+.orde {
+  margin-top: -200px;
+}
+.order {
+  margin-top: -200px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

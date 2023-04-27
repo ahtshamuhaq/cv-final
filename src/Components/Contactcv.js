@@ -51,15 +51,15 @@ const Contactcv = ({ street, email, phone }) => {
         <div>
           <div className="  rep">
             <h1 className="    p-3   hh ml-[5%] text-[15px ]  text-black break-words mb-4 ">
-              {street.length === 0 ? "Street Number:-" : street}
+              {street.length === 0 ? "Street Number " : street}
             </h1>
             <h1 className="break-words p-3 text-[15px ]   hh ml-[5%] text-black mb-4">
-              {phone.length === 0 ? "Phone Number:-" : phone}
+              {phone.length === 0 ? "Phone Number " : phone}
             </h1>
           </div>
           <br />
           <h1 className=" break-words mt-[-20px] text-[15px ]  p-3  hh ml-[5%]  text-black">
-            {email.length === 0 ? "Email Address:-" : email}
+            {email.length === 0 ? "Email Address " : email}
           </h1>
         </div>
       </div>

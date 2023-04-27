@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../src/App.css";
 const Educationcv = ({ education }) => {
   return (
@@ -15,7 +15,7 @@ const Educationcv = ({ education }) => {
                 className="   mt-10 break-words  font-extrabold  text-[12px]  text-black  hh ml-[7%] mb-4  "
                 key={index}
               >
-                {/* {degree[i].Degree ? "Degree:-" : degree[i].Degree} */}
+                {/* {degree[i].Degree ? "Degree " : degree[i].Degree} */}
                 {console.log("the following items are", items)}
                 {items.degree}
               </span>
@@ -27,7 +27,7 @@ const Educationcv = ({ education }) => {
               </span>
               {/* <span className="         hh  break-words ml-2  text-[12px]  text-[#2BABE2]   mt-16 ">
                 {inputList[i].Institute.length === 0
-                  ? "Institute Name:-"
+                  ? "Institute Name "
                   : inputList[i].Institute}{" "}
               </span> */}
               <span className="text-black text-[12px] ">Town</span>

@@ -63,7 +63,6 @@ const Education = (props) => {
   const [inputList, setinputList] = useState([
     { Degree: "", Institute: "", Year: "" },
   ]);
-
   const handleinputchange = (e, index) => {
     const { name, value } = e.target;
     const list = [...inputList];
@@ -71,15 +70,6 @@ const Education = (props) => {
     setinputList(list);
   };
 
-  const handleremove = (index) => {
-    const list = [...inputList];
-    list.splice(index, 1);
-    setinputList(list);
-  };
-
-  const handleaddclick = () => {
-    setinputList([...inputList, { Degree: "", Institute: "", Year: "" }]);
-  };
   return (
     <div className=" w-[100%]">
       {inputList.map((x, i) => (
@@ -123,7 +113,7 @@ const Education = (props) => {
               />
               <label htmlFor="floatingInput">Institute Name</label>
             </div>
-            <div className="col-md-2 mt-4">
+            {/* <div className="col-md-2 mt-4">
               {inputList.length !== 1 && (
                 <button
                   className="bg-blue-500 bts ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
@@ -141,10 +131,10 @@ const Education = (props) => {
                   AddMore
                 </button>
               )}
-            </div>
+            </div> */}
           </div>
 
-          <div className="w-[65%] bord mt-[-70px] order">
+          <div className="w-[65%] bord  order">
             <h1 className=" text-[25px]  ml-[5%] text-[#2BABE2] mb-5  ">
               Education Details
             </h1>
@@ -152,7 +142,7 @@ const Education = (props) => {
             <div>
               <h1 className="    break-words text-[15px ] font-extrabold   text-black  hh ml-[7%] mb-5  ">
                 {inputList[i].Degree.length === 0
-                  ? "Degree:-"
+                  ? "Degree "
                   : inputList[i].Degree}
               </h1>
               <span className="         hh  ml-[7%] text-[15px ] break-words   text-black   ">
@@ -162,18 +152,10 @@ const Education = (props) => {
               </span>
               <span className="         hh  break-words ml-2 text-[15px ]  text-[#2BABE2]   mt-16 ">
                 {inputList[i].Institute.length === 0
-                  ? "Institute Name:-"
+                  ? "Institute Name "
                   : inputList[i].Institute}{" "}
               </span>
               <span className="text-black ">Town</span>
-              <br />
-              <ol
-                className="text-black  ml-[12%] text-xl"
-                style={{ listStyleType: "disc" }}
-              >
-                <li className="mt-4">Specialization</li>
-                <li className="mt-4">Achievements</li>
-              </ol>
             </div>
           </div>
         </div>

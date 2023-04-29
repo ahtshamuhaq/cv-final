@@ -3,42 +3,51 @@ import "./App.css";
 
 import Form from "./Components/Form";
 import CV from "./Components/CV";
-// import Educationcv from "./Components/Educationcv";
-// import Workcv from "./Components/Workcv";
-import Works from "./Components/Works";
-import Full from "./Full";
-
 function App() {
-  // const initialDAta = [{ Degree: "", Institute: "", Year: "" }];
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [designation, setDesignation] = useState("");
   const [street, setStreet] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  // const [education, setEducation] = useState(initialDAta);
-  // const [inputLists, setinputLists] = useState([
-  //   { Role: "", Company: "", Year: "" },
-  // ]);
 
-  // const handleremove = (index) => {
-  //   const list = [...education];
-  //   list.splice(index, 1);
-  //   setEducation(list);
-  // };
-  // const handleaddclick = () => {
-  //   setEducation([...education, { initialDAta }]);
-  // };
+  const [education, setEducation] = useState([
+    {
+      Degree: "",
+      Institute: "",
+      Year: "",
+      Town: "",
+    },
+  ]);
+  const [details, setDetails] = useState([
+    { specialization: "", acheivments: "" },
+  ]);
+  const [workDetails, setWorkDetails] = useState([
+    { specialization: "", acheivments: "" },
+  ]);
 
-  // const handleaddingclick = () => {
-  //   setinputLists([...inputLists, { Role: "", Company: "", Year: "" }]);
-  // };
-  // const handleremoving = (index) => {
-  //   const list = [...inputLists];
-  //   list.splice(index, 1);
-  //   setinputLists(list);
-  // };
-
+  const [work, setWork] = useState([
+    { Role: "", Year: "", Company: "", Town: "" },
+  ]);
+  const handleremove = (index) => {
+    const list = [...education];
+    list.splice(index, 1);
+    setEducation(list);
+  };
+  const handleaddclick = () => {
+    setEducation([
+      ...education,
+      { Degree: "", Institute: "", Year: "", Town: "" },
+    ]);
+  };
+  const handleremoved = (index) => {
+    const list = [...details];
+    list.splice(index, 1);
+    setDetails(list);
+  };
+  const handleaddedclick = () => {
+    setDetails([...details, { specialization: "", acheivments: "" }]);
+  };
   return (
     <div>
       <div className=" h-[100%] flex w-[100%] ">
@@ -56,6 +65,14 @@ function App() {
             email={email}
             setEmail={setEmail}
             setStreet={setStreet}
+            education={education}
+            setEducation={setEducation}
+            details={details}
+            setDetails={setDetails}
+            work={work}
+            setWork={setWork}
+            workDetails={workDetails}
+            setWorkDetails={setWorkDetails}
           />
         </div>
         <div className="w-[70%]">
@@ -64,48 +81,16 @@ function App() {
             lastName={lastName}
             designation={designation}
             street={street}
+            education={education}
+            details={details}
             phone={phone}
             email={email}
+            work={work}
+            workDetails={workDetails}
           />
         </div>
       </div>
 
-      <div>
-        {/* {education.map((x, i) => (
-          <div>
-            <div className="h-[100%] flex w-[100%]">
-              <div className="w-[30%]">
-                <Education education={education} setEducation={setEducation} />
-
-                {console.log("education:", education)}
-              </div>
-              <div className="w-[70%]">
-                <Educationcv education={education} />
-              </div>
-            </div>
-            <div className="col-md-2  bg-[#333333] w-[30%]">
-              {education.length !== 1 && (
-                <button
-                  className="bg-blue-500  ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                  onClick={() => handleremove(i)}
-                >
-                  Remove
-                </button>
-              )}
-              {education.length - 1 === i && (
-                <button
-                  className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                  onClick={handleaddclick}
-                >
-                  AddMore
-                </button>
-              )}
-            </div>
-          </div>
-        ))} */}
-        <Full />
-        {/* <Description /> */}
-      </div>
       {/* <div>
         {inputLists.map((x, i) => (
           <div>
@@ -128,7 +113,7 @@ function App() {
               )}
               {inputLists.length - 1 === i && (
                 <button
-                  className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                  className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-"
                   onClick={handleaddingclick}
                 >
                   AddMore
@@ -138,7 +123,7 @@ function App() {
           </div>
         ))}
       </div> */}
-      <Works />
+      {/* <Works /> */}
     </div>
   );
 }

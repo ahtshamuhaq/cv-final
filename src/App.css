@@ -1,6 +1,7 @@
 body {
   color: white;
   font-family: "Open Sans";
+  overflow: hidden;
 }
 .forms {
   overflow-y: scroll;

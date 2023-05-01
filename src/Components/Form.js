@@ -45,6 +45,14 @@ const Form = ({
       { Degree: "", Institute: "", Year: "", Town: "" },
     ]);
   };
+  const handlesremove = (index) => {
+    const list = [...work];
+    list.splice(index, 1);
+    setWork(list);
+  };
+  const handlesaddclick = () => {
+    setWork([...work, { Role: "", Year: "", Company: "", Town: "" }]);
+  };
   const handleremoved = (index) => {
     const list = [...details];
     list.splice(index, 1);
@@ -243,7 +251,7 @@ const Form = ({
               {work.length !== 1 && (
                 <button
                   className="bg-blue-500 mt-4  ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                  onClick={() => handleremove(index)}
+                  onClick={() => handlesremove(index)}
                 >
                   Remove
                 </button>
@@ -251,7 +259,7 @@ const Form = ({
               {work.length - 1 === index && (
                 <button
                   className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                  onClick={handleaddclick}
+                  onClick={handlesaddclick}
                 >
                   AddMore
                 </button>

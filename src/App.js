@@ -19,39 +19,19 @@ function App() {
       Town: "",
     },
   ]);
-  const [details, setDetails] = useState([
-    { specialization: "", acheivments: "" },
-  ]);
-  const [workDetails, setWorkDetails] = useState([
-    { specialization: "", acheivments: "" },
-  ]);
+  const [details, setDetails] = useState([{ specialization: "" }]);
+  const [workDetails, setWorkDetails] = useState([{ specialization: "" }]);
+  const [eduach, setEduach] = useState([{ acheivments: "" }]);
+  const [workach, setWorkach] = useState([{ acheivments: "" }]);
 
   const [work, setWork] = useState([
     { Role: "", Year: "", Company: "", Town: "" },
   ]);
-  const handleremove = (index) => {
-    const list = [...education];
-    list.splice(index, 1);
-    setEducation(list);
-  };
-  const handleaddclick = () => {
-    setEducation([
-      ...education,
-      { Degree: "", Institute: "", Year: "", Town: "" },
-    ]);
-  };
-  const handleremoved = (index) => {
-    const list = [...details];
-    list.splice(index, 1);
-    setDetails(list);
-  };
-  const handleaddedclick = () => {
-    setDetails([...details, { specialization: "", acheivments: "" }]);
-  };
+
   return (
-    <div>
-      <div className=" h-[100%] flex w-[100%] ">
-        <div className="w-[30%]">
+    <div className="bg-[#E4E4E4] ">
+      <div className=" h-[100%] flex w-[100%]  ">
+        <div className="w-[30%] bg-[#333333] p-3  ">
           <Form
             setFirstName={setFirstName}
             firstName={firstName}
@@ -73,9 +53,13 @@ function App() {
             setWork={setWork}
             workDetails={workDetails}
             setWorkDetails={setWorkDetails}
+            eduach={eduach}
+            setEduach={setEduach}
+            workach={workach}
+            setWorkach={setWorkach}
           />
         </div>
-        <div className="w-[70%]">
+        <div className="w-[70%] bg-white px-[55px] py-9">
           <CV
             firstName={firstName}
             lastName={lastName}
@@ -87,43 +71,11 @@ function App() {
             email={email}
             work={work}
             workDetails={workDetails}
+            eduach={eduach}
+            workach={workach}
           />
         </div>
       </div>
-
-      {/* <div>
-        {inputLists.map((x, i) => (
-          <div>
-            <div className="h-[100%] flex w-[100%]">
-              <div className="w-[30%]">
-                <Work inputLists={inputLists[i]} />
-              </div>
-              <div className="w-[70%]">
-                <Workcv inputLists={inputLists[i]} />
-              </div>
-            </div>
-            <div className="col-md-2  bg-[#333333] w-[30%]">
-              {inputLists.length !== 1 && (
-                <button
-                  className="bg-blue-500  ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                  onClick={() => handleremoving(i)}
-                >
-                  Remove
-                </button>
-              )}
-              {inputLists.length - 1 === i && (
-                <button
-                  className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-"
-                  onClick={handleaddingclick}
-                >
-                  AddMore
-                </button>
-              )}
-            </div>
-          </div>
-        ))}
-      </div> */}
-      {/* <Works /> */}
     </div>
   );
 }

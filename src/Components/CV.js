@@ -4,9 +4,10 @@ import Introcv from "./Introcv";
 import Contactcv from "./Contactcv";
 import Educationcv from "./Educationcv";
 import Descriptioncv from "./Descriptioncv";
-import Work from "./Work";
 import Workdescv from "./Workdescv";
 import Workcv from "./Workcv";
+import Educationacheivecv from "./Educationacheivecv";
+import Workacheivecv from "./Workacheivecv";
 
 const CV = ({
   firstName,
@@ -19,9 +20,11 @@ const CV = ({
   details,
   work,
   workDetails,
+  eduach,
+  workach,
 }) => {
   return (
-    <div>
+    <div className="cvs">
       <Introcv
         firstName={firstName}
         lastName={lastName}
@@ -41,6 +44,13 @@ const CV = ({
                 </div>
               </>
             ))}
+            {eduach.map((x, index) => (
+              <>
+                <div className="w-[70%]">
+                  <Educationacheivecv eduach={eduach} index={index} />
+                </div>
+              </>
+            ))}
           </>
         ))}
       </div>
@@ -54,6 +64,13 @@ const CV = ({
               <>
                 <div className="w-[70%]">
                   <Workdescv workDetails={workDetails} index={index} />
+                </div>
+              </>
+            ))}
+            {workach.map((x, index) => (
+              <>
+                <div className="w-[70%]">
+                  <Workacheivecv workach={workach} index={index} />
                 </div>
               </>
             ))}

@@ -6,7 +6,7 @@ const Descriptioncv = ({ details, index }) => {
       <div className="w-[65%]">
         <div>
           <ol
-            className="text-black  ml-[19%] text-xl"
+            className="text-black ml-8 text-[16px]  font-medium leading-4"
             style={{ listStyleType: "disc" }}
           >
             <li className="mb-3 mt-3">
@@ -14,7 +14,6 @@ const Descriptioncv = ({ details, index }) => {
                 ? "specialization"
                 : details[index].specialization}
             </li>
-            <li>acheivements: {details[index].acheivements}</li>
           </ol>
         </div>
       </div>

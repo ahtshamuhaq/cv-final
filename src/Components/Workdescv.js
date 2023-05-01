@@ -6,7 +6,7 @@ const Workdescv = ({ workDetails, index }) => {
       <div className="w-[65%]">
         <div>
           <ol
-            className="text-black  ml-[19%] text-xl"
+            className="text-black ml-8 text-[16px]  font-medium leading-4"
             style={{ listStyleType: "disc" }}
           >
             <li className="mb-3 mt-3">
@@ -14,7 +14,6 @@ const Workdescv = ({ workDetails, index }) => {
                 ? "specialization"
                 : workDetails[index].specialization}
             </li>
-            <li>acheivements: {workDetails[index].acheivements}</li>
           </ol>
         </div>
       </div>

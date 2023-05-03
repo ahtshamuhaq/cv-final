@@ -1,6 +1,6 @@
 import React from "react";
 import "../../src/App.css";
-const Workcv = ({ work, index }) => {
+const Workcv = ({ work, index, stillWorking }) => {
   return (
     <div className="content w-[100%]">
       <div className="w-[100%] mt-8 ">
@@ -11,18 +11,43 @@ const Workcv = ({ work, index }) => {
           {console.log("here in CV index is ", index)}
 
           <div>
-            <h1 className="    mt-4 break-words  font-extrabold  text-[12px]  text-black  hh mb-2 ml-2   ">
+            <h1 className="    mt-4 break-words  font-extrabold  text-[18px]  text-black  hh mb-2 ml-2   ">
               {work[index].Role.length === 0 ? "Role" : work[index].Role}
             </h1>
-            <span className="          hh  ml-2 mt-2  break-words  text-[12px]  text-black   ">
-              {work[index].Year.length === 0 ? "Time Period" : work[index].Year}
+            <span className="          hh  ml-2 mt-2  break-words  text-[18px]  text-black   ">
+              {work[index].Joining.length === 0
+                ? "Joining Date"
+                : work[index].Joining}
             </span>
-            <span className="          hh  break-words ml-2  text-[12px]  text-[#2BABE2]   mt-16 ">
+            <span
+              className={`hh ml-2 mt-2 break-words text-[18px] text-black ${
+                stillWorking ? "hidden" : ""
+              }`}
+            >
+              ----
+            </span>
+            <span
+              className={`abc hh ml-2 mt-2 break-words text-[18px] text-black ${
+                stillWorking ? "" : "hidden"
+              }`}
+            >
+              (Still Working here)
+            </span>
+            <span
+              className={`abd hh ml-2 mt-2 break-words text-[18px] text-black ${
+                stillWorking ? "hidden" : ""
+              }`}
+            >
+              {work[index].Leaving.length === 0
+                ? "Leaving Date"
+                : work[index].Leaving}
+            </span>
+            <span className="          hh  break-words ml-2  text-[18px]  text-[#2BABE2]   mt-16 ">
               {work[index].Company.length === 0
                 ? "Company Name"
                 : work[index].Company}
             </span>
-            <span className="text-black ml-2 text-[12px] ">
+            <span className="text-black ml-2 text-[18px] ">
               {work[index].Town.length === 0 ? "Town" : work[index].Town}
             </span>
             <br />

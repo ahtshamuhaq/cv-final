@@ -10,7 +10,7 @@ function App() {
   const [street, setStreet] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-
+  const [stillWorking, setStillWorking] = useState(false);
   const [education, setEducation] = useState([
     {
       Degree: "",
@@ -22,7 +22,14 @@ function App() {
   ]);
 
   const [work, setWork] = useState([
-    { Role: "", Year: "", Company: "", Town: "", Specialization: [""] },
+    {
+      Role: "",
+      Joining: "",
+      Leaving: "",
+      Company: "",
+      Town: "",
+      Specialization: [""],
+    },
   ]);
 
   return (
@@ -46,6 +53,8 @@ function App() {
             setEducation={setEducation}
             work={work}
             setWork={setWork}
+            stillWorking={stillWorking}
+            setStillWorking={setStillWorking}
           />
         </div>
         <div className="w-[70%] bg-white px-[55px] py-9">
@@ -58,6 +67,7 @@ function App() {
             phone={phone}
             email={email}
             work={work}
+            stillWorking={stillWorking}
           />
         </div>
       </div>

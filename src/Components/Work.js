@@ -1,6 +1,6 @@
 import React from "react";
 import "../../src/App.css";
-const Work = ({ work, setWork, index }) => {
+const Work = ({ work, setWork, index, setStillWorking, stillWorking }) => {
   console.log(index);
 
   const handleInputChange = (event, index) => {
@@ -30,6 +30,9 @@ const Work = ({ work, setWork, index }) => {
     const list = [...work];
     list.splice(index, 1);
     setWork(list);
+  };
+  const handleStillWorkingChange = (event) => {
+    setStillWorking(event.target.checked);
   };
 
   return (
@@ -66,32 +69,54 @@ const Work = ({ work, setWork, index }) => {
               )}
             </div>
           </div>
-          <div className="flex justify-start">
-            <div className=" form-floating w-[45%] ">
-              <input
-                type="text"
-                value={work[index].role}
-                name="Role"
-                className="  bg-[#333333]  text-[12px]   p-2 inp form-control   text-white focus:bg-[#333333] "
-                placeholder="Your Role"
-                onChange={(e) => handleInputChange(e, index)}
-              />
-              <label htmlFor="floatingInput">Role</label>
-            </div>{" "}
-            <br />
-            <div className="form-group form-floating ml-3 w-[43%] ">
+          <div className=" form-floating w-[90%] ">
+            <input
+              type="text"
+              value={work[index].role}
+              name="Role"
+              className="  bg-[#333333]  text-[12px]   p-2 inp form-control   text-white focus:bg-[#333333] "
+              placeholder="Your Role"
+              onChange={(e) => handleInputChange(e, index)}
+            />
+            <label htmlFor="floatingInput">Role</label>
+          </div>{" "}
+          <div className="flex justify-start mt-4">
+            <div className="form-group form-floating  w-[45%] ">
               <input
                 type="date"
-                name="Year"
+                name="Joining"
                 className="  bg-[#333333] text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
-                value={work[index].year}
+                value={work[index].Joining}
                 placeholder="Time period"
                 onChange={(e) => handleInputChange(e, index)}
               />
-              <label htmlFor="floatingInput">Time Period</label>
+              <label htmlFor="floatingInput">Joining Date</label>
+            </div>
+            <div
+              className={`form-group abd form-floating ml-3 w-[43%] ${
+                stillWorking ? "hidden" : ""
+              }`}
+            >
+              <input
+                type="date"
+                name="Leaving"
+                className="  bg-[#333333] text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                value={work[index].Leaving}
+                placeholder="Time period"
+                onChange={(e) => handleInputChange(e, index)}
+              />
+              <label htmlFor="floatingInput">Leaving Date</label>
             </div>
           </div>
-          <br />
+          <div className="mt-4 mb-4">
+            <label htmlFor="floatingInput">Still Working</label>
+            <input
+              type="checkbox"
+              placeholder="Time period"
+              className="ml-3"
+              onChange={handleStillWorkingChange}
+            />
+          </div>
           <div className="flex justify-start">
             <div className="form-group form-floating w-[45%] ">
               <input

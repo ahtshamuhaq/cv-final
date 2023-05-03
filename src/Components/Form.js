@@ -19,6 +19,8 @@ const Form = ({
   setEmail,
   education,
   setEducation,
+  stillWorking,
+  setStillWorking,
 
   work,
   setWork,
@@ -39,7 +41,14 @@ const Form = ({
   const handleAddWork = () => {
     setWork([
       ...work,
-      { Role: "", Year: "", Company: "", Town: "", Specialization: [""] },
+      {
+        Role: "",
+        Joining: "",
+        Leaving: "",
+        Company: "",
+        Town: "",
+        Specialization: [""],
+      },
     ]);
   };
 
@@ -83,12 +92,18 @@ const Form = ({
           </>
         ))}
       </div>
-      <div>
+      <div className="mb-16">
         {work.map((x, index) => (
           <>
-            <Work work={work} setWork={setWork} index={index} />
+            <Work
+              work={work}
+              setWork={setWork}
+              index={index}
+              stillWorking={stillWorking}
+              setStillWorking={setStillWorking}
+            />
 
-            <div className="col-md-2  bg-[#333333] w-[100%] pt-2 mb-16">
+            <div className="col-md-2  bg-[#333333] w-[100%] pt-2 ">
               {work.length - 1 === index && (
                 <button
                   className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"

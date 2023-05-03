@@ -14,6 +14,7 @@ const CV = ({
   phone,
   education,
   work,
+  stillWorking,
 }) => {
   return (
     <div className="cvs">
@@ -36,7 +37,7 @@ const CV = ({
         {work.map((x, index) => (
           <>
             <div className="w-[70%]">
-              <Workcv work={work} index={index} />
+              <Workcv work={work} index={index} stillWorking={stillWorking} />
             </div>
           </>
         ))}

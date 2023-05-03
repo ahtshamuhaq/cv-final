@@ -22,7 +22,7 @@ const Contact = ({ street, setStreet, phone, setPhone, email, setEmail }) => {
         </div>
         <br />
         <div className="flex justify-start">
-          <div className=" form-floating ">
+          <div className=" form-floating w-[45%] ">
             <input
               type="Number"
               className=" bg-[#333333] p-2 inp  text-[12px]  mt-1 form-control  text-white focus:bg-[#333333]"
@@ -35,7 +35,7 @@ const Contact = ({ street, setStreet, phone, setPhone, email, setEmail }) => {
           </div>
           <br />
 
-          <div className=" form-floating ml-3">
+          <div className=" form-floating w-[43%] ml-3">
             <input
               type="email"
               className=" bg-[#333333] p-2 inp  text-[12px]   mt-1 form-control  text-white focus:bg-[#333333] "

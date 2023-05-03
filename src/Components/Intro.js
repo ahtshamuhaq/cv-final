@@ -15,8 +15,8 @@ const Intro = ({
         <h1 className=" text-[15px] mb-8   font-extrabold pt-6 ">
           My Information
         </h1>
-        <div className="flex justify-start">
-          <div className=" form-floating">
+        <div className="flex justify-start w-[100%]">
+          <div className=" form-floating w-[45%]">
             <input
               type="text"
               className=" bg-[#333333] p-1 h-2 inp   text-[12px]  mt-1 form-control  text-white focus:bg-[#333333] "
@@ -26,7 +26,7 @@ const Intro = ({
             />
             <label htmlFor="floatingInput">FirstName </label>
           </div>
-          <div className=" form-floating ml-3">
+          <div className=" form-floating w-[43%] ml-3">
             <input
               type="text"
               className=" bg-[#333333] p-2 inp  text-[12px]  mt-1  form-control  text-white focus:bg-[#333333] "

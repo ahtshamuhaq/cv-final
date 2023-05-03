@@ -26,6 +26,20 @@ const Workcv = ({ work, index }) => {
               {work[index].Town.length === 0 ? "Town" : work[index].Town}
             </span>
             <br />
+            {work[index].Specialization.map((special, index) => (
+              <div>
+                <ol
+                  className="text-black ml-8 text-[16px]  font-medium leading-4"
+                  style={{ listStyleType: "disc" }}
+                >
+                  <li className="mb-3 mt-3">
+                    {special.length === 0
+                      ? "specialization/Acheivements"
+                      : special}
+                  </li>
+                </ol>
+              </div>
+            ))}
           </div>
         </div>
       </div>

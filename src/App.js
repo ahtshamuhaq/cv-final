@@ -17,15 +17,12 @@ function App() {
       Institute: "",
       Year: "",
       Town: "",
+      Specialization: [""],
     },
   ]);
-  const [details, setDetails] = useState([{ specialization: "" }]);
-  const [workDetails, setWorkDetails] = useState([{ specialization: "" }]);
-  const [eduach, setEduach] = useState([{ acheivments: "" }]);
-  const [workach, setWorkach] = useState([{ acheivments: "" }]);
 
   const [work, setWork] = useState([
-    { Role: "", Year: "", Company: "", Town: "" },
+    { Role: "", Year: "", Company: "", Town: "", Specialization: [""] },
   ]);
 
   return (
@@ -47,16 +44,8 @@ function App() {
             setStreet={setStreet}
             education={education}
             setEducation={setEducation}
-            details={details}
-            setDetails={setDetails}
             work={work}
             setWork={setWork}
-            workDetails={workDetails}
-            setWorkDetails={setWorkDetails}
-            eduach={eduach}
-            setEduach={setEduach}
-            workach={workach}
-            setWorkach={setWorkach}
           />
         </div>
         <div className="w-[70%] bg-white px-[55px] py-9">
@@ -66,13 +55,9 @@ function App() {
             designation={designation}
             street={street}
             education={education}
-            details={details}
             phone={phone}
             email={email}
             work={work}
-            workDetails={workDetails}
-            eduach={eduach}
-            workach={workach}
           />
         </div>
       </div>

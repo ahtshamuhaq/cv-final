@@ -5,7 +5,7 @@ const Educationcv = ({ education, index }) => {
     <div className="content w-[100%] ">
       <div className="w-[100%] ">
         <div className=" bord ord">
-          <h1 className=" text-[15px] font-black   text-[#2BABE2]    mt-2  ">
+          <h1 className=" text-[15px] font-black pt-8   text-[#2BABE2]      ">
             Education Details
           </h1>
           {console.log("here in CV index is ", index)}
@@ -32,6 +32,21 @@ const Educationcv = ({ education, index }) => {
                 : education[index].Town}
             </span>
             <br />
+
+            {education[index].Specialization.map((special, specialInd) => (
+              <div>
+                <ol
+                  className="text-black ml-8 text-[16px]  font-medium leading-4"
+                  style={{ listStyleType: "disc" }}
+                >
+                  <li className="mb-3 mt-3">
+                    {special.length === 0
+                      ? "specialization/Acheivements"
+                      : special}
+                  </li>
+                </ol>
+              </div>
+            ))}
           </div>
         </div>
       </div>

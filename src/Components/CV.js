@@ -17,7 +17,7 @@ const CV = ({
   stillWorking,
 }) => {
   return (
-    <div className="overflow-y-scroll h-full">
+    <div className="cv h-full">
       <Introcv
         firstName={firstName}
         lastName={lastName}

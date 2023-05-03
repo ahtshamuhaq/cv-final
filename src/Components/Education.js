@@ -115,7 +115,7 @@ const Education = ({ education, setEducation, index }) => {
           </div>
           <div>
             {education[index].Specialization.map((special, specialInd) => (
-              <div className="w-full flex w-11/12">
+              <div className="flex w-11/12">
                 <div
                   className="form-group form-floating w-2/3 mt-4"
                   key={specialInd}

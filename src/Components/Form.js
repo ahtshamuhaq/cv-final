@@ -79,10 +79,10 @@ const Form = ({
               index={index}
             />
 
-            <div className="col-md-2  bg-[#333333] w-[100%] pt-2">
+            <div className="col-md-2 bg-gray  w-full pt-2">
               {education.length - 1 === index && (
                 <button
-                  className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                  className="bg-blue mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                   onClick={handleAddEducation}
                 >
                   Add more{" "}
@@ -103,10 +103,10 @@ const Form = ({
               setStillWorking={setStillWorking}
             />
 
-            <div className="col-md-2  bg-[#333333] w-[100%] pt-2 ">
+            <div className="col-md-2 bg-gray w-full pt-2">
               {work.length - 1 === index && (
                 <button
-                  className="bg-blue-500 mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                  className="bg-blue mt-2 ml-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                   onClick={handleAddWork}
                 >
                   AddMore

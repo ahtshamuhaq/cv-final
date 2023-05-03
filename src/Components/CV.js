@@ -17,7 +17,7 @@ const CV = ({
   stillWorking,
 }) => {
   return (
-    <div className="cvs">
+    <div className="overflow-y-scroll h-full">
       <Introcv
         firstName={firstName}
         lastName={lastName}
@@ -27,7 +27,7 @@ const CV = ({
       <div>
         {education.map((x, index) => (
           <>
-            <div className="w-[70%]">
+            <div>
               <Educationcv education={education} index={index} />
             </div>
           </>
@@ -36,7 +36,7 @@ const CV = ({
       <div className="mb-24">
         {work.map((x, index) => (
           <>
-            <div className="w-[70%]">
+            <div>
               <Workcv work={work} index={index} stillWorking={stillWorking} />
             </div>
           </>

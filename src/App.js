@@ -34,8 +34,8 @@ function App() {
 
   return (
     <div className="bg-[#E4E4E4] ">
-      <div className=" h-[100%] flex w-[100%]  ">
-        <div className="w-[30%] bg-[#333333] p-3  ">
+      <div className=" h-full flex w-full  ">
+        <div className="w-[461px] bg-gray  p-3  ">
           <Form
             setFirstName={setFirstName}
             firstName={firstName}
@@ -57,7 +57,7 @@ function App() {
             setStillWorking={setStillWorking}
           />
         </div>
-        <div className="w-[70%] bg-white px-[55px] py-9">
+        <div className="bg-white w-full px-[55px] py-9">
           <CV
             firstName={firstName}
             lastName={lastName}

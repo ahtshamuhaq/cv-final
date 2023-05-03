@@ -36,17 +36,17 @@ const Work = ({ work, setWork, index, setStillWorking, stillWorking }) => {
   };
 
   return (
-    <div className="content w-[100%]">
-      <div className="  w-[100%] ">
-        <div className="    bg-[#333333] bard">
-          <div className="flex justify-between w-[90%]">
-            <h1 className=" text-[15px] mb-8   font-extrabold pt-6  ">
+    <div className="w-full">
+      <div className="w-full">
+        <div className="bg-gray">
+          <div className="flex justify-between w-11/12">
+            <h1 className="text-[15px] mb-8 font-extrabold pt-6">
               Work Details
             </h1>
             <div className="mb-8 pt-8">
               {work.length !== 1 && (
                 <button
-                  className=" text-white font-bold "
+                  className="text-white font-bold"
                   onClick={() => handleRemoveWork(index)}
                 >
                   {
@@ -69,23 +69,23 @@ const Work = ({ work, setWork, index, setStillWorking, stillWorking }) => {
               )}
             </div>
           </div>
-          <div className=" form-floating w-[90%] ">
+          <div className="form-floating w-11/12">
             <input
               type="text"
               value={work[index].role}
               name="Role"
-              className="  bg-[#333333]  text-[12px]   p-2 inp form-control   text-white focus:bg-[#333333] "
+              className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
               placeholder="Your Role"
               onChange={(e) => handleInputChange(e, index)}
             />
             <label htmlFor="floatingInput">Role</label>
           </div>{" "}
-          <div className="flex justify-start mt-4">
-            <div className="form-group form-floating  w-[45%] ">
+          <div className="flex justify-start mt-4 w-11/12">
+            <div className="form-group form-floating w-1/2 ">
               <input
                 type="date"
                 name="Joining"
-                className="  bg-[#333333] text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
                 value={work[index].Joining}
                 placeholder="Time period"
                 onChange={(e) => handleInputChange(e, index)}
@@ -93,14 +93,14 @@ const Work = ({ work, setWork, index, setStillWorking, stillWorking }) => {
               <label htmlFor="floatingInput">Joining Date</label>
             </div>
             <div
-              className={`form-group abd form-floating ml-3 w-[43%] ${
+              className={`form-group abd form-floating ml-3 w-1/2 ${
                 stillWorking ? "hidden" : ""
               }`}
             >
               <input
                 type="date"
                 name="Leaving"
-                className="  bg-[#333333] text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
                 value={work[index].Leaving}
                 placeholder="Time period"
                 onChange={(e) => handleInputChange(e, index)}
@@ -117,12 +117,12 @@ const Work = ({ work, setWork, index, setStillWorking, stillWorking }) => {
               onChange={handleStillWorkingChange}
             />
           </div>
-          <div className="flex justify-start">
-            <div className="form-group form-floating w-[45%] ">
+          <div className="flex justify-start w-11/12">
+            <div className="form-group form-floating w-1/2">
               <input
                 type="text"
                 name="Company"
-                className="  bg-[#333333]  text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
                 value={work[index].institute}
                 placeholder="Company Name"
                 onChange={(e) => handleInputChange(e, index)}
@@ -130,11 +130,11 @@ const Work = ({ work, setWork, index, setStillWorking, stillWorking }) => {
               <label htmlFor="floatingInput">Company Name</label>
             </div>
             <br />
-            <div className="form-group form-floating w-[43%] ml-3 ">
+            <div className="form-group form-floating w-1/2 ml-3 ">
               <input
                 type="text"
                 name="Town"
-                className="  bg-[#333333]  text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
                 value={work[index].town}
                 placeholder="Town Name"
                 onChange={(e) => handleInputChange(e, index)}
@@ -144,15 +144,15 @@ const Work = ({ work, setWork, index, setStillWorking, stillWorking }) => {
           </div>
           <div>
             {work[index].Specialization.map((special, specialInd) => (
-              <div className=" w-[100%] flex ">
+              <div className=" w-full flex ">
                 <div
-                  className="form-group  form-floating w-[65%] mt-4 "
+                  className="form-group form-floating w-2/3 mt-4"
                   key={specialInd}
                 >
                   <input
                     type="text"
                     name="Specialization"
-                    className="  bg-[#333333]   text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                    className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
                     value={special}
                     placeholder="Town Name"
                     onChange={(e) => handlesInputChange(e, specialInd)}
@@ -160,10 +160,10 @@ const Work = ({ work, setWork, index, setStillWorking, stillWorking }) => {
                   <br />
                   <label htmlFor="floatingInput">specialization</label>
                 </div>
-                <div className="  bg-[#333333] w-[25%]  flex justify-end">
+                <div className="bg-gray w-fit flex justify-end">
                   {work[index].Specialization.length !== 1 && (
                     <button
-                      className="  mt-2 ml-6  text-white font-bold"
+                      className="mt-2 ml-6 text-white font-bold"
                       onClick={() => removeSpecial(index, specialInd)}
                     >
                       <i className="fa fa-minus"></i>
@@ -171,7 +171,7 @@ const Work = ({ work, setWork, index, setStillWorking, stillWorking }) => {
                   )}
                   {work[index].Specialization.length - 1 === specialInd && (
                     <button
-                      className=" mt-2 ml-6  text-white font-bold"
+                      className="mt-2 ml-6 text-white font-bold"
                       onClick={() => addSpecial(index)}
                     >
                       <i className="fa fa-plus"></i>

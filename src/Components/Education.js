@@ -30,11 +30,11 @@ const Education = ({ education, setEducation, index }) => {
     setEducation(list);
   };
   return (
-    <div className=" w-[100%]">
-      <div className="  w-[100%] ">
-        <div className="    bg-[#333333] bard">
-          <div className="flex justify-between w-[90%]">
-            <h1 className=" text-[15px] mb-8   font-extrabold pt-8  ">
+    <div className=" w-full">
+      <div className="  w-full ">
+        <div className=" bg-gray">
+          <div className="flex justify-between w-11/12">
+            <h1 className=" text-[15px] mb-8 font-extrabold pt-8">
               Education Details
             </h1>
             <div className="mb-8 pt-8 ">
@@ -63,23 +63,23 @@ const Education = ({ education, setEducation, index }) => {
               )}
             </div>
           </div>
-          <div className="flex justify-start">
-            <div className=" form-floating w-[45%] ">
+          <div className="flex justify-start w-11/12">
+            <div className="form-floating w-1/2 ">
               <input
                 type="text"
                 value={education[index].degree}
                 name="Degree"
-                className="  bg-[#333333]  text-[12px]   p-2 inp form-control   text-white focus:bg-[#333333] "
+                className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
                 placeholder="Your Degree"
                 onChange={(e) => handleInputChange(e, index)}
               />
               <label htmlFor="floatingInput">Degree</label>
             </div>{" "}
-            <div className="form-group form-floating w-[43%]  ml-3">
+            <div className="form-group form-floating w-1/2 ml-3">
               <input
                 type="date"
                 name="Year"
-                className="  bg-[#333333]  text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="bg-gray text-[12px] p-2 inp form-control text-white focus:bg-gray"
                 value={education[index].year}
                 placeholder="Date"
                 onChange={(e) => handleInputChange(e, index)}
@@ -88,12 +88,12 @@ const Education = ({ education, setEducation, index }) => {
             </div>
           </div>
           <br />
-          <div className="flex justify-start">
-            <div className="form-group form-floating w-[45%] ">
+          <div className="flex justify-start w-11/12">
+            <div className="form-group form-floating w-1/2">
               <input
                 type="text"
                 name="Institute"
-                className="  bg-[#333333]   text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
                 value={education[index].institute}
                 placeholder="Institute Name"
                 onChange={(e) => handleInputChange(e, index)}
@@ -101,11 +101,11 @@ const Education = ({ education, setEducation, index }) => {
               <label htmlFor="floatingInput">Institute Name</label>
             </div>
             <br />
-            <div className="form-group form-floating w-[43%] ml-3">
+            <div className="form-group form-floating w-1/2 ml-3">
               <input
                 type="text"
                 name="Town"
-                className="  bg-[#333333]   text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
                 value={education[index].town}
                 placeholder="Town Name"
                 onChange={(e) => handleInputChange(e, index)}
@@ -115,15 +115,15 @@ const Education = ({ education, setEducation, index }) => {
           </div>
           <div>
             {education[index].Specialization.map((special, specialInd) => (
-              <div className="w-[100%] flex">
+              <div className="w-full flex w-11/12">
                 <div
-                  className="form-group form-floating w-[65%] mt-4"
+                  className="form-group form-floating w-2/3 mt-4"
                   key={specialInd}
                 >
                   <input
                     type="text"
                     name="Specialization"
-                    className="  bg-[#333333]   text-[12px]   p-2 inp form-control  text-white focus:bg-[#333333] "
+                    className="bg-gray text-[12px] p-2 form-control text-white focus:bg-gray"
                     value={special}
                     placeholder="Town Name"
                     onChange={(e) => handlesInputChange(e, specialInd)}
@@ -131,10 +131,10 @@ const Education = ({ education, setEducation, index }) => {
                   <br />
                   <label htmlFor="floatingInput">specialization</label>
                 </div>
-                <div className=" bg-[#333333] w-[25%] flex justify-end">
+                <div className=" bg-gray w-fit flex justify-end">
                   {education[index].Specialization.length !== 1 && (
                     <button
-                      className=" mt-2 ml-6  text-white font-bold"
+                      className="mt-2 ml-6 text-white font-bold"
                       onClick={() => removeSpecial(index, specialInd)}
                     >
                       <i className="fa fa-minus"></i>
@@ -143,7 +143,7 @@ const Education = ({ education, setEducation, index }) => {
                   {education[index].Specialization.length - 1 ===
                     specialInd && (
                     <button
-                      className=" mt-2 ml-6   text-white font-bold"
+                      className="mt-2 ml-6 text-white font-bold"
                       onClick={() => addSpecial(index)}
                     >
                       <i className="fa fa-plus"></i>

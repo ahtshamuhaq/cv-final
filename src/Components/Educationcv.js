@@ -5,7 +5,7 @@ const Educationcv = ({ education, index }) => {
     <div className="content w-[100%] ">
       <div className="w-[100%] ">
         <div className=" bord ord">
-          <h1 className=" text-[15px] font-black pt-8   text-[#2BABE2]      ">
+          <h1 className=" text-[15px] font-black pt-4   text-[#2BABE2]      ">
             Education Details
           </h1>
           {console.log("here in CV index is ", index)}
